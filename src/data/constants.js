@@ -15,8 +15,7 @@ export const Bio = {
   description:
     "Graduated of Higher Degree in Multimedia Applications and Video Games Development. I know Web Programming, Database, Applications Mobil and Video games.I am interested in joining a company as a junior programmer to put my skills into practice and provide the company's users with the best digital experience. As a student, I have created several games, programs, and websites, which I have attached. I always work with the desire to improve and adapt to the company and environment that I find myself working at.",
   github: "https://github.com/AmaniFadli",
-  resume:
-    "https://drive.google.com/file/d/1ffZrcMcn8UatXGIaautbbqpV7ADNaETA/view?usp=sharing",
+  resume:"",
   linkedin: "https://www.linkedin.com/in/amani-fadli-dokkali-81b8172a0/",
   itchio: "https://amanifd.itch.io/",
 };
