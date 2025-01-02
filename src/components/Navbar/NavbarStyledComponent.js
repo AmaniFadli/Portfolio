@@ -1,7 +1,20 @@
 import { Link as LinkR } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import _default from '../../themes/default';
 
+const slideDown = keyframes`
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(5%);
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
 export const Nav = styled.div`
     background-color: ${({theme}) => theme.card_light};
     height: 80px;
@@ -124,24 +137,25 @@ export const MobileIcon = styled.div`
 `
 
 export const MobileMenu = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 16px;
-    position: absolute;
-    top: 80px;
-    right: 0;
-    width: 100%;
-    padding: 12px 40px 24px 40px;
-    background: ${({ theme }) => theme.card_light+99};
-    transition: all 0.6s ease-in-out;
-    transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-100%)')};
-    border-radius: 0 0 20px 20px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    opacity: ${({ isOpen }) => (isOpen ? '100%' : '0')};
-    z-index: ${({ isOpen }) => (isOpen ? '1000' : '-1000')};
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  width: 100%;
+  padding: 12px 40px 24px 40px;
+  background: ${({ theme }) => theme.card_light + 99};
+  border-radius: 0 0 20px 20px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1000;
 
-`
+  animation: ${({ isOpen }) => (isOpen ? slideDown : 'none')} 0.5s ease;
+  transform: ${({ isOpen }) => (isOpen ? 'translateY(0)' : 'translateY(-100%)')};
+  opacity: ${({ isOpen }) => (isOpen ? '1' : '0')};
+  transition: opacity 0.3s ease;
+`;
 
 export const MobileMenuItems = styled.ul`
   display: flex;
@@ -191,6 +205,9 @@ export const MobileMenuButton = styled.a`
 `;
 
 export  const MobileLink = styled.a`
+  display: flex; /* Activa flexbox */
+  align-items: center; /* Alinea verticalmente al centro */
+  gap: 0.5rem;
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
