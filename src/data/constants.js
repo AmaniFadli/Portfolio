@@ -114,7 +114,7 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/flipr.jpeg?alt=media&token=1d72532a-45eb-4c1a-a81a-c9bed9fec543",
+    img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV8_ibp-PDE6CuOoRKWsbUfVo5-ZfmU6ipXg&s",
     role: "Simulation Programmer Intern, Drone Simulator",
     company: "AEROFOR",
     date: "Feb 2023 - Present",
@@ -146,6 +146,7 @@ export const education = [
     desc: "Research Project: “ Jupiter: An Impossible Star “, based on the study of the formation, composition and impact of Jupiter on the Solar System and the potential of a binary system by programming a simulation. ",
     degree: "Spanish Baccalaureate in Technology,",
   },
+  
 ];
 
 export const projects = [

@@ -62,48 +62,49 @@ const Desc = styled.div`
 `;
 
 const TimelineSection = styled.div`
-    width: 100%;
-    max-width: 1000px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    @media (max-width: 660px) {
-        align-items: end;
-    }
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
 `;
 
-
-
 const index = () => {
-    return (
-        <Container id="education">
-            <Wrapper>
-                <Title>Education</Title>
-                <Desc>
-                    My education has been a journey of self-discovery and growth
-                </Desc>
-                <TimelineSection>
-                    <Timeline>
-                        {education.map((education,index) => (
-                            <TimelineItem >
-                                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                    <EducationCard education={education}/>
-                                </TimelineContent>
-                                <TimelineSeparator>
-                                    <TimelineDot variant="outlined" color="secondary" />
-                                    {index !== experiences.length  && <TimelineConnector style={{ background: '#854CE6' }} />}
-                                </TimelineSeparator>
-                            </TimelineItem>
-                        ))}
-                    </Timeline>
-
-                </TimelineSection>
-            </Wrapper>
-        </Container>
-    )
+  return (
+    <Container id="education">
+      <Wrapper>
+        <Title>Education</Title>
+        <Desc>My education has been a journey of self-discovery and growth</Desc>
+        <TimelineSection>
+          <Timeline position="alternate">
+            {education.map((education, index) => (
+              <TimelineItem key={index}>
+                <TimelineSeparator>
+                  <TimelineDot variant="outlined" color="secondary" />
+                  {index < education.length - 1 && (
+                    <TimelineConnector style={{ background: '#854CE6' }} />
+                  )}
+                </TimelineSeparator>
+                <TimelineContent
+                  sx={{
+                    py: '12px',
+                    px: 2,
+                    flex: 1,
+                    // Márgenes para separar del centro
+                    ...(index % 2 === 0
+                      ? { marginRight: '20px' } // Margen derecho para elementos pares
+                      : { marginLeft: '20px' }), // Margen izquierdo para elementos impares
+                  }}
+                >
+                  <EducationCard education={education} />
+                </TimelineContent>
+              </TimelineItem>
+            ))}
+          </Timeline>
+        </TimelineSection>
+      </Wrapper>
+    </Container>
+  );
 }
 
 export default index
