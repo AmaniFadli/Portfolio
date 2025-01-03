@@ -172,13 +172,13 @@ export const ResumeButton = styled.a`
     appearance: button;
     text-decoration: none;
     width: 95%;
-    max-width: 300px;
+    max-width: 200px;
     text-align: center;
     padding: 16px 0;
     color:${({ theme }) => theme.white};
     border-radius: 20px;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 15px;
     font-weight: 600;
     transition: all 0.2s ease-in-out !important;
     background: hsla(271, 100%, 50%, 1);

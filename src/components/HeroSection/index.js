@@ -4,6 +4,7 @@ import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, Hero
 import HeroImg from '../../images/HeroImage.jpeg'
 import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
+import { FiDownload } from 'react-icons/fi';
 
 const HeroSection = () => {
     return (
@@ -26,7 +27,7 @@ const HeroSection = () => {
                             </Span>
                         </TextLoop>
                         <SubTitle>{Bio.description}</SubTitle>
-                        <ResumeButton href={Bio.resume} target='display'>Check Resume</ResumeButton>
+                        <ResumeButton href={Bio.resume}  download="Amani Fadli Dokkali CV.pdf"  target="_blank">Download CV <FiDownload /></ResumeButton>
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">

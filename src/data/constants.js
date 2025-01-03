@@ -5,6 +5,7 @@ import project4 from "../utils/projects/p4.png";
 import project5 from "../utils/projects/p5.png";
 import project6 from "../utils/projects/p6.jpg";
 import project7 from "../utils/projects/p7.png";
+import cv from "../utils/projects/cv.pdf";
 
 export const Bio = {
   name: "Amani Fadli Dokkali",
@@ -15,7 +16,7 @@ export const Bio = {
   description:
     "I am a graduate in Multimedia Applications and Video Game Development, with experience in Web Programming, Databases, Mobile Apps, and Game Development. I am seeking a junior programmer position to apply my skills and enhance the digital experience. I am committed to learning and adapting to the work environment.",
   github: "https://github.com/AmaniFadli",
-  resume:"",
+  resume:require("../utils/projects/cv.pdf"),
   linkedin: "https://www.linkedin.com/in/amani-fadli-dokkali-81b8172a0/",
   itchio: "https://amanifd.itch.io/",
 };

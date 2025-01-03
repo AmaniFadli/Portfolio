@@ -60,8 +60,8 @@ const Tags = styled.div`
 const Tag = styled.span`
     font-size: 12px;
     font-weight: 400;
-    color: ${({ theme }) => theme.primary};
-    background-color: ${({ theme }) => theme.primary + 15};
+    color:rgb(209, 25, 117);
+    background-color: ${({ theme }) => theme.primary + 30};
     padding: 2px 8px;
     border-radius: 10px;
 `
