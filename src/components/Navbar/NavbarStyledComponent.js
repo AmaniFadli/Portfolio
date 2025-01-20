@@ -22,7 +22,6 @@ export const Nav = styled.div`
     align-items: center;
     justify-content: center;
     font-size: 1rem;
-    position: sticky;
     top: 0;
     z-index: 10;
     @media (max-width: 960px) {
@@ -57,32 +56,41 @@ export const Span = styled.div`
     font-size: 18px;
 `;
 export const NavItems = styled.ul`
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-    gap: 32px;
-    padding: 0 6px;
-    list-style: none;
+  position: fixed;
+  top: 0;
+  right: 0; 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  list-style: none;
+  width: 120px;
+  height: 100vh;
+  background-color: transparent;
+  z-index: 100;
 
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
+  @media screen and (max-width: 768px) {
+    display: none; 
+  }
 `;
 
 export const NavLink = styled.a`
-    color: ${({ theme }) => theme.text_primary};
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    text-decoration: none;
-    :hover {
-      color: ${({ theme }) => theme.primary};
-    }
+  margin-block: 20px; /* Espaciado vertical entre los elementos */
+  margin-left: 10px; /* Ajusta la separación hacia la izquierda */
+  color: ${({ theme }) => theme.text_primary};
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+  text-align: left; /* Alinea el texto hacia la izquierda */
 
-    &.active {
-      border-bottom: 2px solid ${({ theme }) => theme.primary};
-    }
+  :hover {
+    color: ${({ theme }) => theme.primary};
+  }
+
+  &.active {
+    border-bottom: 2px solid ${({ theme }) => theme.primary};
+  }
 `;
 
 
