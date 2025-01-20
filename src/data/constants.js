@@ -118,7 +118,7 @@ export const experiences = [
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV8_ibp-PDE6CuOoRKWsbUfVo5-ZfmU6ipXg&s",
     role: "Simulation Programmer Intern, Drone Simulator",
     company: "AEROFOR",
-    date: "Feb 2023 - Present",
+    date: "Feb 2024 - Present",
     desc: "Interactive Simulator Development: Created an immersive simulator with realistic physics and detailed environments, offering intuitive controls, training modules, and real-time feedback. Level Design: Designed varied and progressively challenging levels with interactive elements, optimized for efficient performance and an engaging experience. User Management Development: Implemented personalised and secure profiles, with performance analysis tools, customization options, and social features for an enhanced experience.",
     skills: [
      "Unity", 
