@@ -54,7 +54,8 @@ const SkillsContainer = styled.div`
   margin-top: 30px;
   gap: 30px;
   justify-content: center;
-`
+  
+`;
 
 const Skill = styled.div`
   width: 100%;
@@ -73,8 +74,7 @@ const Skill = styled.div`
     padding: 10px 36px;
   }
 
-
-`
+`;
 
 const SkillTitle = styled.h2`
   font-size: 28px;
@@ -111,6 +111,13 @@ const SkillItem = styled.div`
     font-size: 14px;
     padding: 6px 12px;
   }
+    transition: all 0.2s ease-in-out !important;
+  &:hover {
+        transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+    box-shadow:  20px 20px 60px #1F2634,
+    filter: brightness(1);
+    } 
 `
 
 const SkillImage = styled.img`

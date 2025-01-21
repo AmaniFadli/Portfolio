@@ -58,16 +58,16 @@ export const Span = styled.div`
 export const NavItems = styled.ul`
   position: fixed;
   top: 0;
-  right: 0; 
+  right: 30px; 
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: flex-end;
   justify-content: center;
   list-style: none;
   width: 120px;
   height: 100vh;
   background-color: transparent;
-  z-index: 100;
+  z-index: 100;  
 
   @media screen and (max-width: 768px) {
     display: none; 
@@ -75,24 +75,61 @@ export const NavItems = styled.ul`
 `;
 
 export const NavLink = styled.a`
-  margin-block: 20px; /* Espaciado vertical entre los elementos */
-  margin-left: 10px; /* Ajusta la separación hacia la izquierda */
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-block: 20px;
   color: ${({ theme }) => theme.text_primary};
   font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   text-decoration: none;
-  text-align: left; /* Alinea el texto hacia la izquierda */
+
+  span {
+    opacity: 0; /* El texto está oculto por defecto */
+    visibility: hidden; /* El texto no es accesible */
+    position: absolute;
+    left: 50px; /* Ajusta la posición a la izquierda del ícono */
+    background-color: ${({ theme }) => theme.card_light};
+    color: ${({ theme }) => theme.text_primary};
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transform: translateX(-10px); /* Posición inicial */
+  }
+
+  &:hover span {
+    opacity: 1; /* Muestra el texto */
+    visibility: visible;
+    transform: translateX(0); /* Posición final */
+  }
 
   :hover {
     color: ${({ theme }) => theme.primary};
   }
-
-  &.active {
-    border-bottom: 2px solid ${({ theme }) => theme.primary};
-  }
 `;
 
+
+export const NavLinkIcons = styled.div`
+  display: flex;
+  justify-content: center; /* Centra el contenido horizontalmente */
+  align-items: center; /* Centra el contenido verticalmente */
+  width: 40px;  /* Tamaño del círculo */
+  height: 40px; /* Tamaño del círculo */
+  border-radius: 50%; /* Hace el contenedor circular */
+  background-color: ${({ theme }) => theme.primary}; /* Color del círculo */
+  transition: background-color 0.3s ease; /* Transición suave */
+  margin-right: 10px; /* Espacio entre el icono y el texto */
+  padding: 0; /* Asegura que no haya relleno adicional */
+
+  svg, img {
+    width: 17px; /* Tamaño del ícono dentro del círculo */
+    height: 17px; /* Tamaño del ícono dentro del círculo */
+  }
+`;
 
 export const GitHubButton = styled.a`
   border: 1.8px solid ${({ theme }) => theme.primary};

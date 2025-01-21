@@ -1,5 +1,5 @@
 import React from 'react'
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink } from './NavbarStyledComponent'
+import { Nav, NavLink, NavbarContainer,NavLinkIcons, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink } from './NavbarStyledComponent'
 import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
@@ -16,7 +16,8 @@ import {
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
-  const theme = useTheme()
+  const theme = useTheme();
+
   return (
     <Nav>
       <NavbarContainer>
@@ -26,11 +27,36 @@ const Navbar = () => {
           }} />
         </MobileIcon>
         <NavItems>
-          <NavLink href="#about"><FaHome/>About</NavLink>
-          <NavLink href='#skills'><FaCode/>Skills</NavLink>
-          <NavLink href='#experience'><FaBriefcase/>Experience</NavLink>
-          <NavLink href='#projects'><FaFolderOpen/>Projects</NavLink>
-          <NavLink href='#education'><FaGraduationCap/>Education</NavLink>
+          <NavLink href="#about">
+            <NavLinkIcons> 
+              <FaHome />
+            </NavLinkIcons>
+            <span>About</span>
+          </NavLink>
+          <NavLink href='#skills'>
+            <NavLinkIcons> 
+            <FaCode/>
+            </NavLinkIcons>
+            <span>Skills</span>
+          </NavLink>
+          <NavLink href='#experience'>
+            <NavLinkIcons> 
+              <FaBriefcase/>
+            </NavLinkIcons>
+            <span>Experience</span>
+          </NavLink>
+          <NavLink href='#projects'>
+            <NavLinkIcons> 
+              <FaFolderOpen/>
+            </NavLinkIcons>
+            <span>Projects</span>
+          </NavLink>
+          <NavLink href='#education'>
+            <NavLinkIcons> 
+              <FaGraduationCap/>
+            </NavLinkIcons>
+            <span>Education</span>
+          </NavLink>
         </NavItems>
         <ButtonContainer>
           <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
