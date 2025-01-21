@@ -52,8 +52,6 @@ const Date = styled.div`
     }
 `
 
-
-
 const Desc = styled.div`
     font-size: 16px;
     font-weight: 400;
@@ -66,11 +64,13 @@ const Desc = styled.div`
 `;
 
 const Image = styled.img`
-    width: 100%;
+    width: 70%; /* Cambia el tamaño al 60% del contenedor */
+    max-width: 500px; /* Máximo ancho para limitar el tamaño en pantallas grandes */
     object-fit: cover;
     border-radius: 12px;
-    margin-top: 30px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    margin: 30px auto 20px auto; /* Centra la imagen horizontalmente */
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+    display: block; /* Asegura que se comporte como un bloque */
 `;
 
 const Label = styled.div`
@@ -212,7 +212,7 @@ const index = ({ openModal, setOpenModal }) => {
                             <Members>
                                 {project?.member.map((member) => (
                                     <Member>
-                                        <MemberImage src={member.img} />
+                                        {/*  <MemberImage src={member.img} />*/}
                                         <MemberName>{member.name}</MemberName>
                                         <a href={member.linkedin} target="new" style={{textDecoration: 'none', color: 'inherit'}}>
                                             <LinkedIn />
