@@ -144,8 +144,15 @@ const MemberName = styled.div`
     @media only screen and (max-width: 600px) {
         font-size: 14px;
     }
+        
 `;
-
+const MemberLink = styled.a`
+    text-decoration: none; /* Elimina la decoración por defecto */
+    color: inherit;
+    &:hover {
+        color: ${({ theme }) => theme.primary};
+    }
+`;
 
 const ButtonGroup = styled.div`
     display: flex;
@@ -214,9 +221,9 @@ const index = ({ openModal, setOpenModal }) => {
                                     <Member>
                                         {/*  <MemberImage src={member.img} />*/}
                                         <MemberName>{member.name}</MemberName>
-                                        <a href={member.linkedin} target="new" style={{textDecoration: 'none', color: 'inherit'}}>
+                                        <MemberLink href={member.linkedin} target="_blank" >
                                             <LinkedIn />
-                                        </a>
+                                        </MemberLink>
                                     </Member>
                                 ))}
                             </Members>

@@ -200,3 +200,18 @@ export const ResumeButton = styled.a`
     } 
 
 `;
+export const SocialMediaIcons = styled.div`
+  display: flex;
+  margin-bottom: 20px;
+`;
+
+export const SocialMediaIcon = styled.a`
+  display: inline-block;
+  margin-right:  1rem;
+  font-size: 1.5rem;
+  color: ${({ theme }) => theme.text_primary};
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
+`;

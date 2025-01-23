@@ -34,25 +34,24 @@ text-overflow: ellipsis;
 `
 
 const Card = styled.div`
-    width: 650px;
-    border-radius: 10px;
-    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+    width: 700px;
     padding: 12px 16px;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    /* Eliminamos fondo, bordes y sombras */
+    background: none;
+    border: none;
+    box-shadow: none;
+
     transition: all 0.3s ease-in-out;
-    &:hover{
-        box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
-        transform: translateY(-5px);
+
+    &:hover {
+        transform: translateY(-5px); /* Sólo el movimiento en hover se mantiene */
     }
-    @media only screen and (max-width: 768px){
-        padding: 10px;
-        gap: 8px;
-        width: 300px;
+    @media only screen and (max-width: 768px) {
+        width: calc(100% - 40px);
     }
 
     &:hover ${Document}{
@@ -64,7 +63,6 @@ const Card = styled.div`
         -webkit-line-clamp: unset;
 
     }
-    border: 0.1px solid #854CE6;
 `
 
 const Top = styled.div`
@@ -125,17 +123,22 @@ const Grade = styled.div`
         font-size: 12px;
     }
 `
-
+const Line = styled.div`
+    width: 100%;
+    height: 1px;
+    background-color: ${({ theme }) => theme.primary};
+    margin: 3px;
+`
 
 
 const EducationCard = ({ education }) => {
     return (
         <Card>
             <Top>
-                <Image src={education.img} />
                 <Body>
-                    <Name>{education.school}</Name>
-                    <Degree>{education.degree}</Degree>
+                    <Name>{education.degree}</Name>
+                    <Line x1="0" y1="0" x2="100%" y2="0" style={{ stroke: 'black', strokeWidth: 2 }} />
+                    <Degree>{education.school}</Degree>
                     <Date>{education.date}</Date>
                 </Body>
             </Top>

@@ -135,7 +135,8 @@ export const education = [
     school: "Institut Pedralbes,Barcelona, Spain",
     date: "Sept 22- Jun 24 ",
     grade: "8,02",
-    degree: "HNC in Development of Muliplatform Apps & Videogames",
+    desc: "In this course prepares you to design and develop multiplatform video games, as well as web and mobile applications. You’ll learn programming, databases, and how to use game engines like Unity or Unreal Engine to create 2D/3D environments, gameplay mechanics, and artificial intelligence. Additionally, you’ll work on web and mobile app development, gaining versatile skills. The course includes a final project (a fully developed video game or application) and internships in the tech industry, making it the perfect mix of creativity and programming to thrive in gaming, web, and mobile development.",
+    degree: "HNC in Development of Muliplatform Apps & Videogame (DAM-VI)",
   },
   {
     id: 1,
