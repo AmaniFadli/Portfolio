@@ -90,7 +90,7 @@ export const NavLink = styled.a`
     visibility: hidden; /* El texto no es accesible */
     position: absolute;
     left: 50px; /* Ajusta la posición a la izquierda del ícono */
-    background-color: ${({ theme }) => theme.card_light};
+    background-color: ${({ theme }) => theme.primary2};
     color: ${({ theme }) => theme.text_primary};
     padding: 5px 8px;
     border-radius: 5px;

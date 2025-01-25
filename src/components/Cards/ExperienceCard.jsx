@@ -25,12 +25,14 @@ const Description = styled.div`
 `
 
 const Span = styled.span`
-overflow: hidden;
-display: -webkit-box;
-max-width: 100%;
--webkit-line-clamp: 4;
--webkit-box-orient: vertical;
-text-overflow: ellipsis;
+    margin-top:20px;
+    overflow: hidden;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    
 `
 
 const Card = styled.div`
@@ -138,7 +140,7 @@ const Skill = styled.div`
      margin-right: 0.5rem; /* mr-2 */
   margin-top: 1rem; /* mt-4 */
   border-radius: 0.25rem; /* rounded */
-  background-color:rgb(24, 17, 28); /* bg-neutral-900 */
+  background-color:rgb(17, 22, 28); /* bg-neutral-900 */
   padding: 0.25rem 0.5rem; /* px-2 py-1 */
   font-size: 0.875rem; /* text-sm */
   font-weight: 500; /* font-medium */
