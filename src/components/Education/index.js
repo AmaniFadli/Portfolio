@@ -63,7 +63,7 @@ const TimelineSection = styled.div`
         top: 0;
         bottom: 0;
         width: 4px;
-        background-color: #854CE6; /* Color de la línea */
+        background-color:${({ theme }) => theme.primary};
     }
 `;
 

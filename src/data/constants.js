@@ -10,7 +10,9 @@ export const Bio = {
   name: "Amani Fadli Dokkali",
   roles: [
     "Game Developer",
-    "Programmer",
+    "Web Programmer",
+    "Java Programmer", 
+    "Programmer"
   ],
   description:
     "I am a graduate in Multimedia Applications and Video Game Development, with experience in Web Programming, Databases, Mobile Apps, and Game Development. I am seeking a junior programmer position to apply my skills and enhance the digital experience. I am committed to learning and adapting to the work environment.",
@@ -125,6 +127,7 @@ export const experiences = [
      "PlayFab"
     ],
   },
+  
 
 ];
 

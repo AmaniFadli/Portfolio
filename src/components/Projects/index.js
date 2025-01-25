@@ -22,7 +22,7 @@ const Projects = ({openModal,setOpenModal}) => {
       <Wrapper>
         <Title>Projects</Title>
         <Desc>
-          Games and more...
+          Games and more in GitHub
         </Desc>
         <ToggleButtonGroup >
           {toggle === 'all' ?
