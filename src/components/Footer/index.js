@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { FaItchIo } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
+import { FaGithub } from 'react-icons/fa';
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -87,16 +88,10 @@ function Footer() {
     <FooterContainer>
       <FooterWrapper>
         <Logo>Amani Fadli Dokkali</Logo>
-        <Nav>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#education">Education</NavLink>
-        </Nav>
         <SocialMediaIcons>
           <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
           <SocialMediaIcon href={Bio.itchio} target="display"><FaItchIo /></SocialMediaIcon>
+          <SocialMediaIcon href={Bio.github} target="display"><FaGithub /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
           &copy; 2024 Amani Fdli Dokkali. All rights reserved.

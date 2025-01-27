@@ -7,7 +7,6 @@ export const Container = styled.div`
     flex-direction: column;
     justify-content: center;
     position: relative;
-    z-index: 1;
     align-items: center;
     clip-path: polygon(0 0, 100% 0, 100% 100%,100% 98%, 0 100%);
 `;
@@ -64,9 +63,17 @@ export const ToggleButtonGroup = styled.div`
 `
 
 export const ToggleButton = styled.div`
-    padding: 8px 18px;
-    border-radius: 6px;
+    display: flex; /* Habilita Flexbox */
+    align-items: center; /* Alinea verticalmente al centro */
+    justify-content: center; /* Alinea horizontalmente al centro */
+    gap: 8px; /* Espacio entre el texto y el icono */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    border: none; /* Sin borde */
+    border-radius: 8px; /* Bordes redondeados */
+    color: ${({ active, theme }) => (active ? theme.white : theme.text_primary)};
+    font-size: 16px; /* Tamaño de fuente */
     cursor: pointer;
+    transition: all 0.3s ease;
     ${({ active, theme }) =>
         active && `
     background: ${theme.text_primary + 20};

@@ -4,6 +4,9 @@ import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, Hero
 import HeroImg from '../../images/HeroImage.jpeg'
 import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { FaItchIo } from 'react-icons/fa';
+import { FaGithub } from 'react-icons/fa';
 import { FiDownload } from 'react-icons/fi';
 
 const HeroSection = () => {
@@ -27,7 +30,12 @@ const HeroSection = () => {
                             </Span>
                         </TextLoop>
                         <SubTitle>{Bio.description}</SubTitle>
-                        <ResumeButton href={Bio.resume}  download="Amani Fadli Dokkali CV.pdf"  target="_blank">Download CV <FiDownload /></ResumeButton>
+                        <SocialMediaIcons>
+                            <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
+                            <SocialMediaIcon href={Bio.itchio} target="display"><FaItchIo /></SocialMediaIcon>
+                            <SocialMediaIcon href={Bio.github} target="display"><FaGithub /></SocialMediaIcon>
+                        </SocialMediaIcons>
+                        <ResumeButton href={Bio.resume} target='display'>Check Resume <FiDownload/></ResumeButton>
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">

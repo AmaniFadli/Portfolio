@@ -25,18 +25,18 @@ const Description = styled.div`
 `
 
 const Span = styled.span`
-overflow: hidden;
-display: -webkit-box;
-max-width: 100%;
--webkit-line-clamp: 4;
--webkit-box-orient: vertical;
-text-overflow: ellipsis;
+    margin-top:20px;
+    overflow: hidden;
+    display: -webkit-box;
+    max-width: 100%;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    
 `
 
 const Card = styled.div`
-    width: 650px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    width: 850px;
     padding: 12px 16px;
     justify-content: space-between;
     position: relative;
@@ -46,7 +46,6 @@ const Card = styled.div`
     gap: 12px;
     transition: all 0.3s ease-in-out;
     &:hover{
-        box-shadow: 0px 0px 20px rgba(0,0,0,0.2);
         transform: translateY(-5px);
     }
     @media only screen and (max-width: 768px){
@@ -65,8 +64,6 @@ const Card = styled.div`
 
     }
 
-    border: 0.1px solid #306EE8;
-    box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
 `
 
 const Top = styled.div`
@@ -86,9 +83,14 @@ const Image = styled.img`
 `
 
 const Body = styled.div`
-    width: 100%;
+    margin-left: 95px;
     display: flex;
     flex-direction: column; 
+    width: 100%;
+    max-width: 36rem; /* 576px */
+    @media (min-width: 1024px) {
+        width: 75%;
+    }
 `
 
 
@@ -111,11 +113,12 @@ const Company = styled.div`
 `
 
 const Date = styled.div`
-    font-size: 12px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_secondary + 80};
-    @media only screen and (max-width: 768px){
-        font-size: 10px;
+    margin-bottom: 0.5rem;
+    font-size: 0.875rem; /* 14px */
+    line-height: 1.25rem; /* 20px */
+    color: ${({ theme }) => theme.text_secondary || '#9ca3af'}; /* Fallback a neutral gray */
+    @media only screen and (max-width: 768px) {
+        font-size: 0.75rem; /* 12px para pantallas pequeñas */
     }
 `
 
@@ -134,12 +137,14 @@ const ItemWrapper = styled.div`
 `
 
 const Skill = styled.div`
-    font-size: 15px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_primary + 99};
-    @media only screen and (max-width: 768px){
-        font-size: 12px;
-    }
+     margin-right: 0.5rem; /* mr-2 */
+  margin-top: 1rem; /* mt-4 */
+  border-radius: 0.25rem; /* rounded */
+  background-color:rgb(17, 22, 28); /* bg-neutral-900 */
+  padding: 0.25rem 0.5rem; /* px-2 py-1 */
+  font-size: 0.875rem; /* text-sm */
+  font-weight: 500; /* font-medium */
+  color:rgb(237, 160, 200); /* text-pink-300 */
 `
 
 
@@ -147,38 +152,40 @@ const Skill = styled.div`
 const ExperienceCard = ({ experience }) => {
     return (
         <Card>
+            
             <Top>
-                <Image src={experience.img} />
+                <Date>{experience.date}</Date>
+                
                 <Body>
                     <Role>{experience.role}</Role>
                     <Company>{experience.company}</Company>
-                    <Date>{experience.date}</Date>
+
+                    <Description>
+                        {experience?.desc &&
+                            <Span>{experience?.desc}</Span>
+
+                        }
+                        {experience?.skills &&
+                            <>
+                                <br />
+                                <Skills>
+                                    <ItemWrapper>
+                                        {experience?.skills?.map((skill, index) => (
+                                            <Skill>• {skill}</Skill>
+                                        ))}
+                                    </ItemWrapper>
+                                </Skills>
+                            </>
+                        }
+                    </Description>
+                    {experience.doc &&
+                        <a href={experience.doc} target="new">
+                            <Document src={experience.doc} />
+                        </a>
+                    }  
                 </Body>
             </Top>
-            <Description>
-                {experience?.desc &&
-                    <Span>{experience?.desc}</Span>
-
-                }
-                {experience?.skills &&
-                    <>
-                        <br />
-                        <Skills>
-                            <b>Skills:</b>
-                            <ItemWrapper>
-                                {experience?.skills?.map((skill, index) => (
-                                    <Skill>• {skill}</Skill>
-                                ))}
-                            </ItemWrapper>
-                        </Skills>
-                    </>
-                }
-            </Description>
-            {experience.doc &&
-                <a href={experience.doc} target="new">
-                    <Document src={experience.doc} />
-                </a>
-            }
+           
         </Card>
     )
 }

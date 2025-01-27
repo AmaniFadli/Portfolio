@@ -1,22 +1,23 @@
 export const darkTheme = {
-  bg: "#461e37", // color5
-  bgLight: "#633953", // color4
-  primary: "#6a183e", // color1
-  text_primary: "#F2F3F4", // Blanco para el texto
-  text_secondary: "#d6becc", // Gris suave
-  card: "#80546f", // color3
-  card_light: "#9e708b", // color2
-  button: "#854CE6", // Un tono resaltante para los botones (puedes personalizar este valor también)
-  white: "#FFFFFF",
-  black: "#000000",
+    bg:"rgb(36, 30, 45)",
+    bgLight: "#1C1E27",
+    primary2:"rgb(49, 28, 46)",  
+    primary:"rgb(237, 160, 200)",
+    text_primary:"#F2F3F4",
+    text_secondary:"#b1b2b3",
+    card:"#171721",
+    card_light: '#191924',
+    button:"#854CE6",
+    white:"#FFFFFF",
+    black:"#000000",
 }
 
 export const lightTheme = {
-  bg: "#bb8ba6", // color1
-  bgLight: "#f0f0f0",
-  primary: "#6a183e", // color2
-  text_primary: "#111111", // Texto oscuro
-  text_secondary: "#48494a", // Gris oscuro
-  card: "#FFFFFF", // Blanco para las tarjetas
-  button: "#5c5b5b", // Gris para los botones
+    bg:"#FFFFFF",
+    bgLight: "#f0f0f0",
+    primary:"#be1adb",
+    text_primary:"#111111",
+    text_secondary:"#48494a",
+    card:"#FFFFFF",
+    button:"#5c5b5b",
 }

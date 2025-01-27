@@ -13,7 +13,6 @@ export const HeroContainer = styled.div`
   @media (max-width: 640) {
     padding: 32px 16px;
   }
-  z-index: 1;
 
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
@@ -200,4 +199,19 @@ export const ResumeButton = styled.a`
         font-size: 18px;
     } 
 
+`;
+export const SocialMediaIcons = styled.div`
+  display: flex;
+  margin-bottom: 20px;
+`;
+
+export const SocialMediaIcon = styled.a`
+  display: inline-block;
+  margin-right:  1rem;
+  font-size: 1.5rem;
+  color: ${({ theme }) => theme.text_primary};
+  transition: color 0.2s ease-in-out;
+  &:hover {
+    color: ${({ theme }) => theme.primary};
+  }
 `;

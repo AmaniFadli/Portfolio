@@ -7,7 +7,6 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 position: relative;
-z-index: 1;
 align-items: center;
 `
 
@@ -54,14 +53,15 @@ const SkillsContainer = styled.div`
   margin-top: 30px;
   gap: 30px;
   justify-content: center;
-`
+  
+`;
 
 const Skill = styled.div`
   width: 100%;
   max-width: 500px;
   background: ${({ theme }) => theme.card};
-  border: 0.1px solid #854CE6;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  border: 0.1px solid rgb(121, 66, 110);
+  box-shadow: rgba(67, 33, 72, 0.15) 0px 4px 24px;
   border-radius: 16px;
   padding: 18px 36px;
   @media (max-width: 768px) {
@@ -73,8 +73,7 @@ const Skill = styled.div`
     padding: 10px 36px;
   }
 
-
-`
+`;
 
 const SkillTitle = styled.h2`
   font-size: 28px;
@@ -111,6 +110,36 @@ const SkillItem = styled.div`
     font-size: 14px;
     padding: 6px 12px;
   }
+
+  span {
+    opacity: 0; /* El texto está oculto por defecto */
+    visibility: hidden; /* El texto no es accesible */
+    position: absolute;
+    left: 50px; /* Ajusta la posición a la izquierda del ícono */
+    background-color: ${({ theme }) => theme.primary2};
+    color: ${({ theme }) => theme.text_primary};
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+    transform: translateX(-10px); /* Posición inicial */
+  }
+
+  transition: all 0.2s ease-in-out !important;
+  &:hover span {
+    opacity: 1; /* Muestra el texto */
+    visibility: visible;
+    transform: translateX(0); /* Posición final */
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.4s ease-in-out;
+    box-shadow:  20px 20px 60px #1F2634,
+    filter: brightness(1);
+    } 
 `
 
 const SkillImage = styled.img`
@@ -136,6 +165,7 @@ const Skills = () => {
                   <SkillItem>
                     <SkillImage src={item.image}/>
                     {item.name}
+                    <span>{item.text}</span>
                   </SkillItem>
                 ))}
               </SkillList>

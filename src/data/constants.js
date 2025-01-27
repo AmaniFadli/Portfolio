@@ -5,18 +5,19 @@ import project4 from "../utils/projects/p4.png";
 import project5 from "../utils/projects/p5.png";
 import project6 from "../utils/projects/p6.jpg";
 import project7 from "../utils/projects/p7.png";
-import cv from "../utils/projects/cv.pdf";
 
 export const Bio = {
   name: "Amani Fadli Dokkali",
   roles: [
     "Game Developer",
-    "Programmer",
+    "Web Programmer",
+    "Java Programmer", 
+    "Programmer"
   ],
   description:
     "I am a graduate in Multimedia Applications and Video Game Development, with experience in Web Programming, Databases, Mobile Apps, and Game Development. I am seeking a junior programmer position to apply my skills and enhance the digital experience. I am committed to learning and adapting to the work environment.",
   github: "https://github.com/AmaniFadli",
-  resume:require("../utils/projects/cv.pdf"),
+  resume: require("../utils/projects/AF-CV.pdf"),
   linkedin: "https://www.linkedin.com/in/amani-fadli-dokkali-81b8172a0/",
   itchio: "https://amanifd.itch.io/",
 };
@@ -28,20 +29,24 @@ export const skills = [
       {
         name: "Unity",
         image: "https://yt3.googleusercontent.com/4YAaX7CsQ-paadHsNvC6wdv2nE_7VTKpoNJOTwFhHL4rQqLC8WFe6mNxL-z-e6sfHZbHG-ucPA=s900-c-k-c0x00ffffff-no-rj",
+        text :"Games in Projects",
       },
       {
         name: "C#",
         image: "https://www.jetbrains.com/guide/assets/csharp-logo-265a149e.svg",
+        text :"Using in Unity ",
       },
       {
         name: "Unreal",
         image:
           "https://bairesdev.mo.cloudinary.net/blog/2022/08/ue-logo-1400x788-1400x788-8f185e1e3635-1.jpg?tx=w_1920,q_auto",
+        text :"Small unfinished projects completed during my academic studies",
       },
       
       {
         name: "C++",
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png",
+        text :"Using in Unreal ",
       },
     ],
   },
@@ -50,31 +55,51 @@ export const skills = [
     skills: [
       {
         name: "React Js",
-        image:
-          "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+        image:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
+        text :"I built this website using ReactJS",
       },
       {
         name: "Node Js",
         image:
           "https://nodejs.org/static/images/logo.svg",
+        text :"Example Proyects in my GitHub",
       },
       {
         name: "HTML",
         image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
+        text :"Example Proyects in my GitHub",
       },
       {
         name: "CSS",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
+        text :"Example Proyects in my GitHub",
       },
       {
         name: "JavaScript",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
+        text :"Example Proyects in my GitHub",
       },
     ],
   },
-  
+  {
+    title: "Mobile Development",
+    skills: [
+      {
+        name: "AndroidStudio",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Android_Studio_Logo_2024.svg/800px-Android_Studio_Logo_2024.svg.png",
+        text :"Example Proyects in my GitHub",
+      },
+      {
+        name: "Kotlin",
+        image:
+          "https://cms-assets.tutsplus.com/cdn-cgi/image/width=360/uploads/users/362/posts/29304/preview_image/picKotlin.jpg",
+        text :"Example Proyects in my GitHub",
+      },
+    ],
+  },
   {
     title: "Others",
     skills: [
@@ -82,31 +107,31 @@ export const skills = [
         name: "Java",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+        text :"Prototype in Projects and in my GitHub",
       },
       {
         name: "MongoDB",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+        text :"Example Proyects in my GitHub",
       },
       {
         name: "MySQL",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
-      },
-      {
-        name: "GitHub",
-        image:
-          "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png",
+        text :"Example Proyects in my GitHub",
       },
       {
         name: "3D Max",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi_D8rh1f1pabHyt_OEo-mXInBIicX5EKwuw&s",
+        text :"Example Proyects in my GitHub",
       },
       {
         name: "Blender",
         image:
           "https://i.pcmag.com/imagery/reviews/00CHLsbAPPKloTAg2PZlVBC-1..v1662670755.jpg",
+        text :"Small unfinished projects completed during my academic studies and my free time ",
       },
     ],
   },
@@ -126,6 +151,7 @@ export const experiences = [
      "PlayFab"
     ],
   },
+  
 
 ];
 
@@ -134,15 +160,16 @@ export const education = [
     id: 0,
     img: "https://media.licdn.com/dms/image/v2/C4D0BAQGkZ66n1TziFw/company-logo_200_200/company-logo_200_200/0/1630559246814/institut_ausis_march_logo?e=2147483647&v=beta&t=ZmocxYNTLmdW5JOFY8aRYIjcQmTR3sejRkYJxAaVL7o",
     school: "Institut Pedralbes,Barcelona, Spain",
-    date: "Sept 22- Jun 24 ",
+    date: "Sept 2022- Jun 2024 ",
     grade: "8,02",
-    degree: "HNC in Development of Muliplatform Apps & Videogames",
+    desc: "In this course prepares you to design and develop multiplatform video games, as well as web and mobile applications. You’ll learn programming, databases, and how to use game engines like Unity or Unreal Engine to create 2D/3D environments, gameplay mechanics, and artificial intelligence. Additionally, you’ll work on web and mobile app development, gaining versatile skills. The course includes a final project (a fully developed video game or application) and internships in the tech industry, making it the perfect mix of creativity and programming to thrive in gaming, web, and mobile development.",
+    degree: "HNC in Development of Muliplatform Apps & Videogame (DAM-VI)",
   },
   {
     id: 1,
     img: "https://pbs.twimg.com/media/GXDQfkgX0AEmCTM.jpg",
     school:"Institut Isaac Albeniz, Badalona, Spain ",
-    date: "Sept 20 – May 22 ",
+    date: "Sept 2020 – May 2022 ",
     grade: "5,69",
     desc: "Research Project: “ Jupiter: An Impossible Star “, based on the study of the formation, composition and impact of Jupiter on the Solar System and the potential of a binary system by programming a simulation. ",
     degree: "Spanish Baccalaureate in Technology,",

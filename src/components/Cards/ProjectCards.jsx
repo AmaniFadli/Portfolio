@@ -16,36 +16,30 @@ const Button = styled.button`
     transition: all 0.8s ease-in-out;
 `
 const Card = styled.div`
-    width: 330px;
-    height: 490px;
-    background-color: ${({ theme }) => theme.card};
-    cursor: pointer;
-    border-radius: 10px;
-    box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
-    overflow: hidden;
-    padding: 26px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 14px;
-    transition: all 0.5s ease-in-out;
-    &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
-        filter: brightness(1.1);
-    }
+    position: relative;
+  width: 330px;
+  height: 300px;
+  cursor: pointer;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.4);
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 50px 4px rgba(0, 0, 0, 0.6);
+    filter: brightness(1.1);
+  }
     &:hover ${Button} {
         display: block;
     }
 `
 
 const Image = styled.img`
-    width: 180px;
-    height: 180px;
-    display: block;  /* Asegúrate de que sea un bloque */
-    margin: 0 auto;  /* Esto centra la imagen horizontalmente */
-    background-color: ${({ theme }) => theme.white};
-    border-radius: 10px;
-    box-shadow: 0 0 16px 2px rgba(0, 0, 0, 0.3);
+    width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: all 0.3s ease-in-out;
 `
 
 const Tags = styled.div`
@@ -74,16 +68,10 @@ const Details = styled.div`
     padding: 0px 2px;
 `
 const Title = styled.div`
-    font-size: 20px;
-    font-weight: 600;
-    color: ${({ theme }) => theme.text_secondary};
-    overflow: hidden;
-    display: -webkit-box;
-    max-width: 100%;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    color: ${({ theme }) => theme.white};
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
 `
 
 const Date = styled.div`
@@ -95,7 +83,23 @@ const Date = styled.div`
         font-size: 10px;
     }
 `
+const Overlay = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Oscurece ligeramente la imagen */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0; /* Inicialmente invisible */
+  transition: opacity 0.3s ease-in-out;
 
+  &:hover {
+    opacity: 1; /* Se muestra al hacer hover */
+  }
+`;
 
 const Description = styled.div`
     font-weight: 400;
@@ -126,25 +130,12 @@ const Avatar = styled.img`
 
 const ProjectCards = ({project,setOpenModal}) => {
     return (
-        <Card onClick={() => setOpenModal({state: true, project: project})}>
-            <Image src={project.image}/>
-            <Tags>
-                {project.tags?.map((tag, index) => (
-                <Tag>{tag}</Tag>
-                ))}
-            </Tags>
-            <Details>
-                <Title>{project.title}</Title>
-                <Date>{project.date}</Date>
-                <Description>{project.description}</Description>
-            </Details>
-            <Members>
-                {project.member?.map((member) => (
-                    <Avatar src={member.img}/>
-                ))}
-            </Members>
-            {/* <Button>View Project</Button> */}
-        </Card>
+        <Card onClick={() => setOpenModal({ state: true, project: project })}>
+      <Image src={project.image} alt={project.title} />
+      <Overlay>
+        <Title>{project.title}</Title>
+      </Overlay>
+    </Card>
     )
 }
 
