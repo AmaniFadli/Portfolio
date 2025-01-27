@@ -7,6 +7,7 @@ import { Bio } from '../../data/constants';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { FaItchIo } from 'react-icons/fa';
 import { FaGithub } from 'react-icons/fa';
+import { FiDownload } from 'react-icons/fi';
 
 const HeroSection = () => {
     return (
@@ -34,7 +35,7 @@ const HeroSection = () => {
                             <SocialMediaIcon href={Bio.itchio} target="display"><FaItchIo /></SocialMediaIcon>
                             <SocialMediaIcon href={Bio.github} target="display"><FaGithub /></SocialMediaIcon>
                         </SocialMediaIcons>
-                        <ResumeButton href={Bio.resume} target='display'>Check Resume</ResumeButton>
+                        <ResumeButton href={Bio.resume} target='display'>Check Resume <FiDownload/></ResumeButton>
                     </HeroLeftContainer>
 
                     <HeroRightContainer id="Right">
