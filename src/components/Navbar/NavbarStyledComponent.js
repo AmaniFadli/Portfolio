@@ -17,13 +17,12 @@ const slideDown = keyframes`
 `;
 export const Nav = styled.div`
     background-color: ${({theme}) => theme.card_light};
-    height: 80px;
+    height: 0.10px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1rem;
-    top: 0;
-    z-index: 10;
+    z-index: 1000;
     @media (max-width: 960px) {
         trastion: 0.8s all ease;
     }
@@ -187,7 +186,7 @@ export const MobileMenu = styled.div`
   justify-content: center;
   gap: 16px;
   position: absolute;
-  top: 80px;
+  top: 0px;
   right: 0;
   width: 100%;
   padding: 12px 40px 24px 40px;

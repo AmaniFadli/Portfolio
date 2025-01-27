@@ -45,14 +45,10 @@ function App() {
           <Navbar />
           <Body>
             <HeroSection />
-            <Wrapper>
-              <Skills />
-              <Experience />
-            </Wrapper>
+            <Skills />
+            <Experience />
             <Projects openModal={openModal} setOpenModal={setOpenModal} />
-            <Wrapper>
-              <Education />
-            </Wrapper>
+            <Education />
             <Footer />
             {openModal.state &&
               <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
