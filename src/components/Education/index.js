@@ -10,7 +10,6 @@ const Container = styled.div`
     align-items: center;
     padding: 60px 20px;
     position: relative;
-    z-index: 1;
 
     @media (max-width: 960px) {
         padding: 40px 20px;
