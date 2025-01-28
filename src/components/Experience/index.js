@@ -20,6 +20,12 @@ const Container = styled.div`
     @media (max-width: 960px) {
         padding: 0px;
     }
+        
+    background: linear-gradient(
+    to bottom, /* Dirección del degradado */
+    ${({ theme }) => theme.bg} 70%, /* Comienza con negro */
+     ${({ theme }) => theme.black}  100% 
+  );
 `;
 
 const Wrapper = styled.div`

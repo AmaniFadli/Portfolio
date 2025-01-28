@@ -2,7 +2,7 @@ import styled from "styled-components";
 import _default from "../../themes/default";
 
 export const HeroContainer = styled.div`
-  background: ${({ theme }) => theme.card_light};
+  background: ${({ theme }) => theme.bg};
   display: flex;
   justify-content: center;
   position: relative;
@@ -47,37 +47,16 @@ export const HeroInnerContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  max-width: 1100px;
+  max-width: 1500px;
 
   @media (max-width: 960px) {
     flex-direction: column;
   }
 `;
 export const HeroLeftContainer = styled.div`
-  width: 100%;
-  order: 1;
-  @media (max-width: 960px) {
-    order: 2;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  @media (max-width: 640px) {
-    order: 2;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-`;
-
-export const HeroRightContainer = styled.div`
-  width: 100%;
+  width: 50%;
   display: flex;
-  order: 2;
-  justify-content: end;
+  order: 1;
   gap: 12px;
   @media (max-width: 960px) {
     order: 1;
@@ -88,6 +67,26 @@ export const HeroRightContainer = styled.div`
 
   @media (max-width: 640px) {
     margin-bottom: 30px;
+  }
+`;
+
+export const HeroRightContainer = styled.div`
+    width: 100%;
+    order: 2;
+    @media (max-width: 960px) {
+    order: 2;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  @media (max-width: 640px) {
+    order: 2;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 `;
 
@@ -111,21 +110,6 @@ export const Img = styled.img`
   }
 `;
 
-export const Title = styled.div`
-  font-weight: 700;
-  font-size: 50px;
-  color: ${({ theme }) => theme.text_primary};
-  line-height: 68px;
-  @media (max-width: 960px) {
-    text-align: center;
-  }
-
-  @media (max-width: 640px) {
-    font-size: 40px;
-    line-height: 48px;
-    margin-bottom: 8px;
-  }
-`;
 
 export const TextLoop = styled.div`
   font-weight: 600;
@@ -152,6 +136,7 @@ export const Span = styled.span`
 export const SubTitle = styled.div`
   font-size: 20px;
   line-height: 32px;
+  text-align: justify;
   margin-bottom: 42px;
   color: ${({ theme }) => theme.text_primary + 95};
 
@@ -214,4 +199,15 @@ export const SocialMediaIcon = styled.a`
   &:hover {
     color: ${({ theme }) => theme.primary};
   }
+`;
+export const Title = styled.div`
+  font-size: 42px;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+    color: ${({ theme }) => theme.text_primary};
+    @media (max-width: 768px) {
+  margin-top: 12px;
+        font-size: 37px;
+    }
 `;

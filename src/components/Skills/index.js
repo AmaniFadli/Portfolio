@@ -2,6 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { skills } from '../../data/constants'
 
+import { motion } from "framer-motion";
+
 const Container = styled.div`
 display: flex;
 flex-direction: column;
@@ -11,13 +13,17 @@ align-items: center;
 `
 
 const Wrapper = styled.div`
+margin-top: 30px;
+background:  ${({ theme }) => theme.primary2} ;
+box-shadow: rgba(222, 197, 226, 0.15) 0px 4px 24px;
+border-radius: 30px;
 position: relative;
 display: flex;
 justify-content: space-between;
 align-items: center;
 flex-direction: column;
-width: 100%;
-max-width: 1100px;
+width: 1500px;
+height: 700px;
 gap: 12px;
 @media (max-width: 960px) {
     flex-direction: column;
@@ -50,7 +56,8 @@ const SkillsContainer = styled.div`
   width: 100%;
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 30px;
   gap: 30px;
   justify-content: center;
   
@@ -59,9 +66,9 @@ const SkillsContainer = styled.div`
 const Skill = styled.div`
   width: 100%;
   max-width: 500px;
-  background: ${({ theme }) => theme.card};
-  border: 0.1px solid rgb(121, 66, 110);
-  box-shadow: rgba(67, 33, 72, 0.15) 0px 4px 24px;
+  background: ${({ theme }) => theme.primary2};
+  border: 2px solid ${({ theme }) => theme.bg};
+  box-shadow: rgba(33, 25, 47, 0.15) 0px 4px 24px;
   border-radius: 16px;
   padding: 18px 36px;
   @media (max-width: 768px) {
@@ -78,7 +85,7 @@ const Skill = styled.div`
 const SkillTitle = styled.h2`
   font-size: 28px;
   font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
+  color: ${({ theme }) => theme.text_primary};
   margin-bottom: 20px;
   text-align: center;
 `
@@ -95,7 +102,7 @@ const SkillItem = styled.div`
   font-size: 16px;
   font-weight: 400;
   color: ${({ theme }) => theme.text_primary + 80};
-  border: 1px solid ${({ theme }) => theme.text_primary + 80};
+  border: 1px solid ${({ theme }) => theme.text_primary};
   border-radius: 12px;
   padding: 12px 16px;
   display: flex;
@@ -116,7 +123,7 @@ const SkillItem = styled.div`
     visibility: hidden; /* El texto no es accesible */
     position: absolute;
     left: 50px; /* Ajusta la posición a la izquierda del ícono */
-    background-color: ${({ theme }) => theme.primary2};
+    background-color: ${({ theme }) => theme.bg};
     color: ${({ theme }) => theme.text_primary};
     padding: 5px 8px;
     border-radius: 5px;
@@ -154,11 +161,18 @@ const Skills = () => {
       <Wrapper>
         <Title>Skills</Title>
         <Desc>
+          
           These are the skills I have been developing over these years of learning and dedication.
         </Desc>
         <SkillsContainer>
           {skills.map((skill) => (
             <Skill>
+              <motion.h1 
+               whileInView={{opacity:1, x:0}}
+               initial={{opacity:0, x: 100}}
+               transition={{duration: 0.5}}
+              
+            >
               <SkillTitle>{skill.title}</SkillTitle>
               <SkillList>
                 {skill.skills.map((item) => (
@@ -169,6 +183,8 @@ const Skills = () => {
                   </SkillItem>
                 ))}
               </SkillList>
+            </motion.h1>
+              
             </Skill>
           ))}
 

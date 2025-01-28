@@ -16,6 +16,7 @@ const Document = styled.img`
 const Description = styled.div`
     width: 100%;
     font-size: 15px;
+    text-align: justify;
     font-weight: 400;
     color: ${({ theme }) => theme.text_primary + 99};
     margin-bottom: 10px;
@@ -28,6 +29,7 @@ const Span = styled.span`
 overflow: hidden;
 display: -webkit-box;
 max-width: 100%;
+text-align: justify;
 -webkit-line-clamp: 4;
 -webkit-box-orient: vertical;
 text-overflow: ellipsis;
