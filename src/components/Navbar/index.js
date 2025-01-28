@@ -11,9 +11,10 @@ import {
   FaGraduationCap,
   FaBriefcase,
   FaFolderOpen,
-  FaEnvelopeOpen
+  FaEnvelopeOpen,
+  FaUserCircle
 } from 'react-icons/fa';
-
+import { MdContactMail } from 'react-icons/md';
 const Navbar = () => {
   const [isOpen, setIsOpen] = React.useState(false);
   const theme = useTheme();
@@ -57,6 +58,12 @@ const Navbar = () => {
             </NavLinkIcons>
             <span>Education</span>
           </NavLink>
+          <NavLink href='#contact'>
+            <NavLinkIcons> 
+              <MdContactMail/>
+            </NavLinkIcons>
+            <span>Contact</span>
+          </NavLink>
         </NavItems>
         {
           isOpen &&
@@ -76,6 +83,9 @@ const Navbar = () => {
             <MobileLink href='#education' onClick={() => {
               setIsOpen(!isOpen)
             }}><FaGraduationCap/>Education</MobileLink>
+            <MobileLink href='#contact' onClick={() => {
+              setIsOpen(!isOpen)
+            }}><MdContactMail/>Contact</MobileLink>
             <GitHubButton style={{padding: '10px 16px',background: `${theme.primary}`, color: 'white',width: 'max-content'}} href={Bio.github} target="_blank">Github Profile</GitHubButton>
           </MobileMenu>
       }

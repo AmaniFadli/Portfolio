@@ -22,11 +22,14 @@ display: flex;
 justify-content: space-between;
 align-items: center;
 flex-direction: column;
-width: 1500px;
+width: 100%;
+max-width: 1500px;
 height: 700px;
 gap: 12px;
 @media (max-width: 960px) {
     flex-direction: column;
+    width: 700px;
+    height: 100%;
 }
 `
 
@@ -159,7 +162,15 @@ const Skills = () => {
   return (
     <Container id="skills">
       <Wrapper>
-        <Title>Skills</Title>
+        <Title>
+          <motion.div
+            whileInView={{opacity:1, y:0}}
+            initial={{opacity:0, y: -100}}
+            transition={{duration: 0.5}}
+          >
+            Skills
+          </motion.div>
+        </Title>
         <Desc>
           
           These are the skills I have been developing over these years of learning and dedication.

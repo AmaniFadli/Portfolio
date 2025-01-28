@@ -16,7 +16,14 @@ const HeroSection = () => {
         <div id="about">
             <br/>
             <Title>
-            About Me</Title>
+                <motion.div
+                    whileInView={{opacity:1, y:0}}
+                    initial={{opacity:0, y: -100}}
+                    transition={{duration: 0.5}}
+                >
+                    About Me
+                </motion.div>
+        </Title>
             <HeroContainer>
                 <HeroInnerContainer >
                     <HeroLeftContainer id="Left">

@@ -4,32 +4,10 @@ import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 import { Snackbar } from '@mui/material';
 
-const Container = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-position: relative;
-z-index: 1;
-align-items: center;
-@media (max-width: 960px) {
-    padding: 0px;
-}
-`
+import { MdOutlineMail } from 'react-icons/md';
+import { MdPhone } from 'react-icons/md';
 
-const Wrapper = styled.div`
-position: relative;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: column;
-width: 100%;
-max-width: 1350px;
-padding: 0px 0px 80px 0px;
-gap: 12px;
-@media (max-width: 960px) {
-    flex-direction: column;
-}
-`
+import { motion } from "framer-motion";
 
 const Title = styled.div`
 font-size: 42px;
@@ -44,6 +22,7 @@ margin-top: 20px;
 `;
 
 const Desc = styled.div`
+  margin-top: 15px;
     font-size: 18px;
     text-align: center;
     max-width: 600px;
@@ -119,7 +98,50 @@ const ContactButton = styled.input`
   font-size: 18px;
   font-weight: 600;
 `
+const Container = styled.div`
+margin-top: 50px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+position: relative;
+align-items: center;
+@media (max-width: 960px) {
+    padding: 0px;
+}
+`
 
+const Wrapper = styled.div`
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+`
+const Box = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid ${({ theme }) => theme.text_secondary || '#ccc'};
+  padding: 20px;
+  width: 300px;
+  height: 150px;
+`;
+
+const Icon = styled.div`
+  font-size: 36px;
+  margin-bottom: 8px;
+  color: ${({ theme }) => theme.white};
+`;
+
+const Text = styled.div`
+  font-size: 18px;
+  font-weight: 500;
+  color: ${({ theme }) => theme.text_primary || '#000'};
+`;
 
 
 const Contact = () => {
@@ -142,27 +164,47 @@ const Contact = () => {
 
 
   return (
-    <Container>
-      <Wrapper>
-        <Title>Contact</Title>
+    <div id="contact">
+      <Container>
+        <Title>
+          <motion.div
+            whileInView={{opacity:1, y:0}}
+            initial={{opacity:0, y: -100}}
+            transition={{duration: 0.5}}
+          >
+            Contact
+        </motion.div>
+        </Title>
         <Desc>Feel free to reach out to me for any questions or opportunities!</Desc>
-        <ContactForm ref={form} onSubmit={handleSubmit}>
-          <ContactTitle>Email Me 🚀</ContactTitle>
-          <ContactInput placeholder="Your Email" name="from_email" />
-          <ContactInput placeholder="Your Name" name="from_name" />
-          <ContactInput placeholder="Subject" name="subject" />
-          <ContactInputMessage placeholder="Message" rows="4" name="message" />
-          <ContactButton type="submit" value="Send" />
-        </ContactForm>
-        <Snackbar
-          open={open}
-          autoHideDuration={6000}
-          onClose={()=>setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
-        />
-      </Wrapper>
-    </Container>
+        <Wrapper>
+          
+        <motion.div 
+            whileInView={{opacity:1, x:0}}
+            initial={{opacity:0, x: 100}}
+            transition={{duration: 0.5}}
+          >
+            <Box>
+              <Icon><MdOutlineMail/></Icon>
+              <Text>amani.fad12@gmail.com</Text>
+            </Box>
+          </motion.div>
+          
+
+          <motion.div 
+            whileInView={{opacity:1, x:0}}
+            initial={{opacity:0, x: -100}}
+            transition={{duration: 0.5}}
+          >
+            <Box>
+              <Icon><MdPhone/></Icon>
+              <Text>+34 662501544 <br/> +44 7425594832</Text>
+            </Box>
+        </motion.div>
+          
+        </Wrapper>
+      </Container>
+    </div>
+    
   )
 }
 
