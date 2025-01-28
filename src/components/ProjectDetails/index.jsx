@@ -3,6 +3,8 @@ import { Modal } from '@mui/material';
 import React from 'react'
 import styled from 'styled-components'
 
+import { motion } from "framer-motion";
+
 const Container = styled.div`
 width: 100%;
 height: 100%;
@@ -181,7 +183,7 @@ const Button = styled.a`
     text-decoration: none;
     transition: all 0.5s ease;
     &:hover {
-        background-color: ${({ theme }) => theme.primary + 99};
+        background-color: ${({ theme }) => theme.primary2};
     }
     @media only screen and (max-width: 600px) {
         font-size: 12px;
@@ -195,7 +197,11 @@ const index = ({ openModal, setOpenModal }) => {
         <Modal open={true} onClose={() => setOpenModal({ state: false, project: null })}>
             <Container>
                 <Wrapper>
-                    <CloseRounded
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                    >
+                        <CloseRounded
                         style={{
                             position: "absolute",
                             top: "10px",
@@ -203,35 +209,37 @@ const index = ({ openModal, setOpenModal }) => {
                             cursor: "pointer",
                         }}
                         onClick={() => setOpenModal({ state: false, project: null })}
-                    />
-                    <Image src={project?.image} />
-                    <Title>{project?.title}</Title>
-                    <Date>{project.date}</Date>
-                    <Tags>
-                        {project?.tags.map((tag) => (
-                            <Tag>{tag}</Tag>
-                        ))}
-                    </Tags>
-                    <Desc>{project?.description}</Desc>
-                    {project.member && (
-                        <>
-                            <Label>Members</Label>
-                            <Members>
-                                {project?.member.map((member) => (
-                                    <Member>
-                                        {/*  <MemberImage src={member.img} />*/}
-                                        <MemberName>{member.name}</MemberName>
-                                        <MemberLink href={member.linkedin} target="_blank" >
-                                            <LinkedIn />
-                                        </MemberLink>
-                                    </Member>
-                                ))}
-                            </Members>
-                        </>
-                    )}
-                    <ButtonGroup>
-                        <Button href={project?.webapp} target='new'>View More</Button>
-                    </ButtonGroup>
+                        />
+                        <Image src={project?.image} />
+                        <Title>{project?.title}</Title>
+                        <Date>{project.date}</Date>
+                        <Tags>
+                            {project?.tags.map((tag) => (
+                                <Tag>{tag}</Tag>
+                            ))}
+                        </Tags>
+                        <Desc>{project?.description}</Desc>
+                        {project.member && (
+                            <>
+                                <Label>Members</Label>
+                                <Members>
+                                    {project?.member.map((member) => (
+                                        <Member>
+                                            {/*  <MemberImage src={member.img} />*/}
+                                            <MemberName>{member.name}</MemberName>
+                                            <MemberLink href={member.linkedin} target="_blank" >
+                                                <LinkedIn />
+                                            </MemberLink>
+                                        </Member>
+                                    ))}
+                                </Members>
+                            </>
+                        )}
+                        <ButtonGroup>
+                            <Button href={project?.webapp} target='new'>View More</Button>
+                        </ButtonGroup>
+
+                    </motion.div>
                 </Wrapper>
             </Container>
 

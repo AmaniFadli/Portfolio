@@ -28,9 +28,9 @@ const StyledDiv = styled.div`
 `;
 
 const Wrapper = styled.div`
-  background: linear-gradient(38.73deg, rgba(255, 0, 0, 0.15) 0%rgba(208, 255, 0, 0)0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%);
+  background: linear-gradient(38.73deg, rgba(227, 130, 130, 0.15) 0%rgba(208, 255, 0, 0)0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%);
   width: 100%;
-  clip-path: polygon(0 0, 100% 0, 100% 100%,30% 98%, 0 100%);
+
 `
 
 
@@ -43,12 +43,20 @@ function App() {
       <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
         <Router >
           <Navbar />
+          <About/>
           <Body>
             <HeroSection />
             <Skills />
-            <Experience />
+
+            <Wrapper>
+              <Experience />
+            </Wrapper>
+            
             <Projects openModal={openModal} setOpenModal={setOpenModal} />
-            <Education />
+            <Wrapper>
+              <Education />
+            </Wrapper>
+            <Contact/>
             <Footer />
             {openModal.state &&
               <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />

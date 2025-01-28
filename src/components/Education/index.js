@@ -3,7 +3,10 @@ import styled from 'styled-components';
 import { education } from '../../data/constants';
 import EducationCard from '../Cards/EducationCard';
 
+import { motion } from "framer-motion";
+
 const Container = styled.div`
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,16 +101,31 @@ const index = () => {
     return (
         <Container id="education">
             <Wrapper>
-                <Title>Education</Title>
+                <Title>
+                    <motion.div
+                        whileInView={{opacity:1, y:0}}
+                        initial={{opacity:0, y: -100}}
+                        transition={{duration: 0.5}}
+                    >
+                        Education
+                    </motion.div>
+                </Title>
                 <Desc>My education has been a journey of self-discovery and growth.</Desc>
-                <TimelineSection>
-                    {education.map((edu, index) => (
-                        <TimelineItem key={index}>
-                            <Dot img={edu.img} />
-                            <EducationCard education={edu} />
-                        </TimelineItem>
-                    ))}
-                </TimelineSection>
+                <motion.div
+                    whileInView={{opacity:1, y:0}}
+                    initial={{opacity:0, y: 100}}
+                    transition={{duration: 0.5}}
+                >
+                    <TimelineSection>
+                        {education.map((edu, index) => (
+                            <TimelineItem key={index}>
+                                <Dot img={edu.img} />
+                                <EducationCard education={edu} />
+                            </TimelineItem>
+                        ))}
+                    </TimelineSection>
+                </motion.div>
+                
             </Wrapper>
         </Container>
     );

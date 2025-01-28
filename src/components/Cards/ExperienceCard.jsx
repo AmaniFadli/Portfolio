@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { motion } from "framer-motion";
+
 const Document = styled.img`
     display: none;
     height: 70px;
@@ -16,6 +18,7 @@ const Document = styled.img`
 const Description = styled.div`
     width: 100%;
     font-size: 15px;
+    text-align: justify;
     font-weight: 400;
     color: ${({ theme }) => theme.text_primary + 99};
     margin-bottom: 10px;
@@ -154,30 +157,46 @@ const ExperienceCard = ({ experience }) => {
         <Card>
             
             <Top>
-                <Date>{experience.date}</Date>
+                <Date>
+                    <motion.div 
+                        whileInView={{opacity:1, x:0}}
+                        initial={{opacity:0, x: -100}}
+                        transition={{duration: 0.5}}
+                    >
+                        {experience.date}
+                    </motion.div>
+                    
+                </Date>
                 
                 <Body>
-                    <Role>{experience.role}</Role>
-                    <Company>{experience.company}</Company>
+                    <motion.div 
+                       whileInView={{opacity:1, x:0}}
+                       initial={{opacity:0, x: 100}}
+                       transition={{duration: 0.5}}
+                    >
+                        <Role>{experience.role}</Role>
+                        <Company>{experience.company}</Company>
 
-                    <Description>
-                        {experience?.desc &&
-                            <Span>{experience?.desc}</Span>
+                        <Description>
+                            {experience?.desc &&
+                                <Span>{experience?.desc}</Span>
 
-                        }
-                        {experience?.skills &&
-                            <>
-                                <br />
-                                <Skills>
-                                    <ItemWrapper>
-                                        {experience?.skills?.map((skill, index) => (
-                                            <Skill>• {skill}</Skill>
-                                        ))}
-                                    </ItemWrapper>
-                                </Skills>
-                            </>
-                        }
-                    </Description>
+                            }
+                            {experience?.skills &&
+                                <>
+                                    <br />
+                                    <Skills>
+                                        <ItemWrapper>
+                                            {experience?.skills?.map((skill, index) => (
+                                                <Skill>• {skill}</Skill>
+                                            ))}
+                                        </ItemWrapper>
+                                    </Skills>
+                                </>
+                            }
+                        </Description>
+                    </motion.div>
+                    
                     {experience.doc &&
                         <a href={experience.doc} target="new">
                             <Document src={experience.doc} />

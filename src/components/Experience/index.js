@@ -1,4 +1,3 @@
-
 import React from 'react'
 import styled from 'styled-components'
 import Timeline from '@mui/lab/Timeline';
@@ -10,6 +9,9 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import ExperienceCard from '../Cards/ExperienceCard';
 import { experiences } from '../../data/constants';
 
+import { motion } from "framer-motion";
+
+
 const Container = styled.div`
     display: flex;
     flex-direction: column;
@@ -20,6 +22,12 @@ const Container = styled.div`
     @media (max-width: 960px) {
         padding: 0px;
     }
+        
+    background: linear-gradient(
+    to bottom, /* Dirección del degradado */
+    ${({ theme }) => theme.bg} 70%, /* Comienza con negro */
+     ${({ theme }) => theme.black}  100% 
+  );
 `;
 
 const Wrapper = styled.div`
@@ -77,7 +85,15 @@ const index = () => {
     return (
         <Container id="experience">
             <Wrapper>
-                <Title>Experience</Title>
+                <Title>
+                    <motion.div
+                        whileInView={{opacity:1, y:0}}
+                        initial={{opacity:0, y: -100}}
+                        transition={{duration: 0.5}}
+                    >
+                        Experience
+                    </motion.div>
+                </Title>
                 <Desc>
                     My work experience.
                 </Desc>

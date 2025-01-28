@@ -2,13 +2,17 @@ import styled from 'styled-components';
 import _default from '../../themes/default';
 
 export const Container = styled.div`
-    background: linear-gradient(343.07deg, rgba(132, 59, 206, 0.06) 5.71%, rgba(132, 59, 206, 0) 64.83%);
+     background: linear-gradient(
+    to bottom, /* Dirección del degradado */
+    ${({ theme }) => theme.black} 20%, /* Comienza con negro */
+     ${({ theme }) => theme.bg}  100% 
+  );
     display: flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
     align-items: center;
-    clip-path: polygon(0 0, 100% 0, 100% 100%,100% 98%, 0 100%);
+
 `;
 
 export const Wrapper = styled.div`
@@ -51,8 +55,8 @@ export const Desc = styled.div`
 
 export const ToggleButtonGroup = styled.div`
     display: flex;
-    border: 1.5px solid  #d6becc !important;
-    color:  #d6becc !important;
+    border: 1.5px solid ${({ theme }) => theme.primary};
+    color: ${({ theme }) => theme.primary};
     font-size: 16px;
     border-radius: 12px;
     font-weight: 500;
@@ -76,11 +80,11 @@ export const ToggleButton = styled.div`
     transition: all 0.3s ease;
     ${({ active, theme }) =>
         active && `
-    background: ${theme.text_primary + 20};
+    background: ${theme.primary + 20};
     `
     }
     &:hover {
-        background: ${({ theme }) => theme.text_primary + 20};
+        background: ${({ theme }) => theme.primary + 1};
     }
     @media (max-width: 768px) {
         padding: 6px 8px;
@@ -89,7 +93,7 @@ export const ToggleButton = styled.div`
 `
 export const Divider = styled.div`
     width: 1.5px;
-    background:   #d6becc !important;
+    background: ${({ theme }) => theme.primary};
 `
 
 

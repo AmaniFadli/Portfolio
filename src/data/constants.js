@@ -6,6 +6,11 @@ import project5 from "../utils/projects/p5.png";
 import project6 from "../utils/projects/p6.jpg";
 import project7 from "../utils/projects/p7.png";
 
+import { FaGamepad } from "react-icons/fa";
+import { FiMonitor } from "react-icons/fi";
+import { FaMobileAlt } from "react-icons/fa";
+import { FaPlus } from "react-icons/fa";
+
 export const Bio = {
   name: "Amani Fadli Dokkali",
   roles: [
@@ -24,7 +29,8 @@ export const Bio = {
 
 export const skills = [
   {
-    title: "Game Development",
+    title: "GAME DEVELOPMENT",
+    icon: <FaGamepad/>,
     skills: [
       {
         name: "Unity",
@@ -39,7 +45,7 @@ export const skills = [
       {
         name: "Unreal",
         image:
-          "https://bairesdev.mo.cloudinary.net/blog/2022/08/ue-logo-1400x788-1400x788-8f185e1e3635-1.jpg?tx=w_1920,q_auto",
+          "https://seeklogo.com/images/U/unreal-engine-logo-12B9A1D996-seeklogo.com.png",
         text :"Small unfinished projects completed during my academic studies",
       },
       
@@ -51,7 +57,8 @@ export const skills = [
     ],
   },
   {
-    title: "Web Development",
+    title: "WEB DEVELOPMENT",
+    icon: <FiMonitor/> ,
     skills: [
       {
         name: "React Js",
@@ -84,7 +91,8 @@ export const skills = [
     ],
   },
   {
-    title: "Mobile Development",
+    title: "MOBILE DEVELOPMENT",
+    icon: <FaMobileAlt/>,
     skills: [
       {
         name: "AndroidStudio",
@@ -101,7 +109,8 @@ export const skills = [
     ],
   },
   {
-    title: "Others",
+    title: "OTHERS",
+    icon: <FaPlus/>,
     skills: [
       {
         name: "Java",
