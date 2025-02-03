@@ -39,22 +39,24 @@ const Span = styled.span`
 `
 
 const Card = styled.div`
-    width: 850px;
+    width: 700px;
     padding: 12px 16px;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 12px;
+
+    /* Eliminamos fondo, bordes y sombras */
+    background: none;
+    border: none;
+    box-shadow: none;
+
     transition: all 0.3s ease-in-out;
-    &:hover{
-        transform: translateY(-5px);
+
+    &:hover {
+        transform: translateY(-5px); /* Sólo el movimiento en hover se mantiene */
     }
-    @media only screen and (max-width: 768px){
-        padding: 10px;
-        gap: 8px;
-        width: 300px;
+    @media only screen and (max-width: 768px) {
+        width: calc(100% - 40px);
     }
 
     &:hover ${Document}{
@@ -86,14 +88,9 @@ const Image = styled.img`
 `
 
 const Body = styled.div`
-    margin-left: 95px;
+    width: 100%;
     display: flex;
     flex-direction: column; 
-    width: 100%;
-    max-width: 36rem; /* 576px */
-    @media (min-width: 1024px) {
-        width: 75%;
-    }
 `
 
 
@@ -116,12 +113,11 @@ const Company = styled.div`
 `
 
 const Date = styled.div`
-    margin-bottom: 0.5rem;
-    font-size: 0.875rem; /* 14px */
-    line-height: 1.25rem; /* 20px */
-    color: ${({ theme }) => theme.text_secondary || '#9ca3af'}; /* Fallback a neutral gray */
-    @media only screen and (max-width: 768px) {
-        font-size: 0.75rem; /* 12px para pantallas pequeñas */
+    font-size: 12px;
+    font-weight: 400;
+    color: ${({ theme }) => theme.text_secondary + 80};
+    @media only screen and (max-width: 768px){
+        font-size: 10px;
     }
 `
 
@@ -143,7 +139,7 @@ const Skill = styled.div`
      margin-right: 0.5rem; /* mr-2 */
   margin-top: 1rem; /* mt-4 */
   border-radius: 0.25rem; /* rounded */
-  background-color:rgb(17, 22, 28); /* bg-neutral-900 */
+  background-color:${({ theme }) => theme.primary2};
   padding: 0.25rem 0.5rem; /* px-2 py-1 */
   font-size: 0.875rem; /* text-sm */
   font-weight: 500; /* font-medium */
@@ -152,59 +148,88 @@ const Skill = styled.div`
 
 
 
+const  EducationCard = ({ experience }) => {
+    return (
+        <Card>
+        <Top>
+            {/* Date se coloca aquí al lado izquierdo */}
+            <Date>{experience.date}</Date>
+
+            <Body>
+                <motion.div
+                    whileInView={{ opacity: 1, x: 0 }}
+                    initial={{ opacity: 0, x: 100 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <Role>{experience.role}</Role>
+                    <Company>{experience.company}</Company>
+
+                    <Description>
+                        {experience?.desc && <Span>{experience?.desc}</Span>}
+                        {experience?.skills && (
+                            <>
+                                <br />
+                                <Skills>
+                                    <ItemWrapper>
+                                        {experience?.skills?.map((skill, index) => (
+                                            <Skill key={index}>• {skill}</Skill>
+                                        ))}
+                                    </ItemWrapper>
+                                </Skills>
+                            </>
+                        )}
+                    </Description>
+                </motion.div>
+
+                {experience.doc && (
+                    <a href={experience.doc} target="new">
+                        <Document src={experience.doc} />
+                    </a>
+                )}
+            </Body>
+        </Top>
+    </Card>
+    )
+}
+const Line = styled.div`
+    width: 100%;
+    height: 1px;
+    background-color: ${({ theme }) => theme.primary};
+    margin: 3px;
+`
+
 const ExperienceCard = ({ experience }) => {
     return (
         <Card>
-            
-            <Top>
-                <Date>
-                    <motion.div 
-                        whileInView={{opacity:1, x:0}}
-                        initial={{opacity:0, x: -100}}
-                        transition={{duration: 0.5}}
-                    >
-                        {experience.date}
-                    </motion.div>
-                    
-                </Date>
-                
-                <Body>
-                    <motion.div 
-                       whileInView={{opacity:1, x:0}}
-                       initial={{opacity:0, x: 100}}
-                       transition={{duration: 0.5}}
-                    >
+            <motion.div
+                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, x: 100 }}
+                transition={{ duration: 0.5 }}
+            >
+                <Top>
+                    <Body>
                         <Role>{experience.role}</Role>
+                        <Line x1="0" y1="0" x2="100%" y2="0" style={{ stroke: 'black', strokeWidth: 2 }} />
                         <Company>{experience.company}</Company>
-
-                        <Description>
-                            {experience?.desc &&
-                                <Span>{experience?.desc}</Span>
-
-                            }
-                            {experience?.skills &&
-                                <>
-                                    <br />
-                                    <Skills>
-                                        <ItemWrapper>
-                                            {experience?.skills?.map((skill, index) => (
-                                                <Skill>• {skill}</Skill>
-                                            ))}
-                                        </ItemWrapper>
-                                    </Skills>
-                                </>
-                            }
-                        </Description>
-                    </motion.div>
-                    
-                    {experience.doc &&
-                        <a href={experience.doc} target="new">
-                            <Document src={experience.doc} />
-                        </a>
-                    }  
-                </Body>
-            </Top>
-           
+                        
+                    </Body>
+                </Top>
+                <Description>
+                    {experience?.desc && <Span>{experience?.desc}</Span>}
+                    {experience?.skills && (
+                        <>
+                            <br />
+                            <Skills>
+                                <ItemWrapper>
+                                    {experience?.skills?.map((skill, index) => (
+                                        <Skill key={index}>• {skill}</Skill>
+                                    ))}
+                                </ItemWrapper>
+                            </Skills>
+                        </>
+                    )}
+                </Description>
+            </motion.div>
         </Card>
     )
 }

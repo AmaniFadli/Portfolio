@@ -177,6 +177,10 @@ export const MobileIcon = styled.div`
     font-size: 1.5rem;
     cursor: pointer;
     color: ${({ theme }) => theme.text_primary};
+    position:fixed;
+    :hover {
+    color: ${({ theme }) => theme.primary};
+  }
   }
 `
 
@@ -185,7 +189,7 @@ export const MobileMenu = styled.div`
   flex-direction: column;
   justify-content: center;
   gap: 16px;
-  position: absolute;
+  position: fixed;
   top: 0px;
   right: 0;
   width: 100%;

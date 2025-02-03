@@ -160,8 +160,6 @@ export const experiences = [
      "PlayFab"
     ],
   },
-  
-
 ];
 
 export const education = [

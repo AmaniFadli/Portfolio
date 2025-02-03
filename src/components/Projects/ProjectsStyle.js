@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import _default from '../../themes/default';
 
 export const Container = styled.div`
+
      background: linear-gradient(
     to bottom, /* Dirección del degradado */
     ${({ theme }) => theme.black} 20%, /* Comienza con negro */
@@ -30,11 +31,12 @@ export const Wrapper = styled.div`
     }
 `;
 
+
 export const Title = styled.div`
 font-size: 42px;
 text-align: center;
 font-weight: 600;
-margin-top: 20px;
+margin-top: 100px;
   color: ${({ theme }) => theme.text_primary};
   @media (max-width: 768px) {
       margin-top: 12px;

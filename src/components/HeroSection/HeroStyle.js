@@ -180,8 +180,9 @@ export const ResumeButton = styled.a`
     
     
     @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
+      padding: 12px 0;
+      font-size: 15px;
+      align-items: center;
     } 
 
 `;

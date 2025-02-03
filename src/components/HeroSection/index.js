@@ -23,7 +23,7 @@ const HeroSection = () => {
                 >
                     About Me
                 </motion.div>
-        </Title>
+            </Title>
             <HeroContainer>
                 <HeroInnerContainer >
                     <HeroLeftContainer id="Left">
@@ -51,8 +51,8 @@ const HeroSection = () => {
                             <p>Additionally, I actively participate in itch.io and GitHub jams, working on video game projects as well as programming language development competitions.</p>
                             <br/>
                             <p>I aspire to develop a shooter, though I am also interested in other areas of the industry, as I am passionate about solving coding problems and creating new websites.</p>
-                        </SubTitle>
-                        <ResumeButton href={Bio.resume} target='display'>Check Resume <FiDownload/></ResumeButton>
+                            </SubTitle>
+                            <ResumeButton href={Bio.resume} target='display'>Check Resume <FiDownload/></ResumeButton>
                         </motion.div>
                         
                     </HeroRightContainer>

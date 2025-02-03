@@ -1,85 +1,128 @@
-import React from 'react'
-import styled from 'styled-components'
-import Timeline from '@mui/lab/Timeline';
-import TimelineItem from '@mui/lab/TimelineItem';
-import TimelineSeparator from '@mui/lab/TimelineSeparator';
-import TimelineConnector from '@mui/lab/TimelineConnector';
-import TimelineContent from '@mui/lab/TimelineContent';
-import TimelineDot from '@mui/lab/TimelineDot';
-import ExperienceCard from '../Cards/ExperienceCard';
+import React from 'react';
+import styled from 'styled-components';
 import { experiences } from '../../data/constants';
+import ExperienceCard from '../Cards/ExperienceCard';
 
 import { motion } from "framer-motion";
 
-
 const Container = styled.div`
+    margin-top: 100px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative;
     align-items: center;
     padding: 40px 0px 80px 0px;
-    @media (max-width: 960px) {
-        padding: 0px;
-    }
-        
+    position: relative;
     background: linear-gradient(
     to bottom, /* Dirección del degradado */
     ${({ theme }) => theme.bg} 70%, /* Comienza con negro */
      ${({ theme }) => theme.black}  100% 
-  );
-`;
-
-const Wrapper = styled.div`
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    max-width: 1350px;
-    padding: 80px 0;
-    gap: 12px;
+    );
     @media (max-width: 960px) {
-        flex-direction: column;
+        padding: 40px 20px;
     }
 `;
 
-const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
-      margin-top: 12px;
-      font-size: 32px;
-  }
+const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
 `;
 
-const Desc = styled.div`
+const Title = styled.h2`
+    font-size: 42px;
+    font-weight: 600;
+    color: ${({ theme }) => theme.text_primary};
+    text-align: center;
+    margin-bottom: 10px;
+
+    @media (max-width: 768px) {
+        font-size: 32px;
+    }
+`;
+
+const Desc = styled.p`
     font-size: 18px;
     text-align: center;
-    max-width: 600px;
     color: ${({ theme }) => theme.text_secondary};
+    margin-bottom: 40px;
+
     @media (max-width: 768px) {
-        margin-top: 12px;
         font-size: 16px;
     }
 `;
 
 const TimelineSection = styled.div`
-    width: 100%;
-    max-width: 1000px;
-    margin-top: 10px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
+    align-items: flex-start;
+    width: 100%;
+    position: relative;
+
+    &:before {
+        content: '';
+        position: absolute;
+        left: 30px; /* Ajusta según el diseño */
+        top: 0;
+        bottom: 0;
+        width: 4px;
+        background-color:${({ theme }) => theme.primary};
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
 `;
 
+const TimelineItem = styled.div`
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 50px; /* Aumenta el espacio para la línea y el punto */
+    gap: 12px;
 
+    &:last-child {
+        margin-bottom: 0;
+    }
+`;
+
+const Dot = styled.div`
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    width: 50px;
+    height: 50px;
+    background-color: #854CE6;
+    border-radius: 50%;
+    border: 3px solid white;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    background-image: ${({ img }) => `url(${img})`};
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+`;
+const DateWrapper = styled.div`
+    font-size: 18px;
+    font-weight: 600;
+    color: ${({ theme }) => theme.text_primary + 99};
+    @media only screen and (max-width: 768px){
+        font-size: 14px;
+    }
+    display: flex;
+    align-items: center;
+    gap: 12px; /* Espacio entre la fecha y el punto */
+
+    position: absolute;
+    left: -200px; /* Mueve la fecha a la izquierda */
+    top: 8px; /* Ajusta la posición verticalmente */
+    @media (max-width: 768px) {
+        top: -30px;
+        left: 50px;
+    }
+`;
 
 const index = () => {
     return (
@@ -94,28 +137,28 @@ const index = () => {
                         Experience
                     </motion.div>
                 </Title>
-                <Desc>
-                    My work experience.
-                </Desc>
-                <TimelineSection>
-                    <Timeline>
-                        {experiences.map((experience,index) => (
-                            <TimelineItem>
-                                <TimelineSeparator>
-                                    <TimelineDot variant="outlined" color="secondary"  />
-                                    {index !== experiences.length - 1 && <TimelineConnector style={{ background: '#854CE6' }} />}
-                                </TimelineSeparator>
-                                <TimelineContent sx={{ py: '12px', px: 2 }}>
-                                    <ExperienceCard experience={experience}/>
-                                </TimelineContent>
+                <Desc>My work experience.</Desc>
+                <motion.div
+                    whileInView={{opacity:1, y:0}}
+                    initial={{opacity:0, y: 100}}
+                    transition={{duration: 0.5}}
+                >
+                    <TimelineSection>
+                        {experiences.map((experience, index) => (
+                            <TimelineItem key={index}>
+                                <DateWrapper key={index}>
+                                {experience.date}
+                                </DateWrapper>
+                                <Dot img={experience.img} />
+                                <ExperienceCard experience={experience}/>
                             </TimelineItem>
                         ))}
-                    </Timeline>
-
-                </TimelineSection>
+                    </TimelineSection>
+                </motion.div>
+                
             </Wrapper>
         </Container>
-    )
-}
+    );
+};
 
-export default index
+export default index;
