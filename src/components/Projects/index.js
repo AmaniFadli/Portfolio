@@ -4,7 +4,8 @@ import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, Togg
 import ProjectCard from '../Cards/ProjectCards'
 import { projects } from '../../data/constants'
 import { Bio } from '../../data/constants';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaGamepad,FaReact,FaPen,FaList,FaCoffee} from 'react-icons/fa';
+
 
 import { motion } from "framer-motion";
 
@@ -41,21 +42,28 @@ const Projects = ({openModal,setOpenModal}) => {
           >
             <ToggleButtonGroup >
               {toggle === 'all' ?
-              <ToggleButton active value="all" onClick={() => handleToggle('all')}>All</ToggleButton>
+              <ToggleButton active value="all" onClick={() => handleToggle('all')}><FaList/></ToggleButton>
               :
-              <ToggleButton value="all" onClick={() => handleToggle('all')}>All</ToggleButton>
+              <ToggleButton value="all" onClick={() => handleToggle('all')}><FaList/></ToggleButton>
               }
               <Divider />
               {toggle === 'games' ?
-                <ToggleButton active value="games" onClick={() => handleToggle('games')}>GAMES</ToggleButton>
+                <ToggleButton active value="games" onClick={() => handleToggle('games')}><FaGamepad/></ToggleButton>
                 :
-                <ToggleButton value="games" onClick={() => handleToggle('games')}>GAMES</ToggleButton>
+                <ToggleButton value="games" onClick={() => handleToggle('games')}><FaGamepad/></ToggleButton>
               }
               <Divider />
               {toggle === 'prototype' ?
-                <ToggleButton active value="prototype" onClick={() => handleToggle('prototype')}>PROTOTYPE</ToggleButton>
+                <ToggleButton active value="prototype" onClick={() => handleToggle('prototype')}><FaCoffee/></ToggleButton>
                 :
-                <ToggleButton value="prototype" onClick={() => handleToggle('prototype')}>PROTOTYPE</ToggleButton>
+                <ToggleButton value="prototype" onClick={() => handleToggle('prototype')}><FaCoffee/></ToggleButton>
+              }
+              <Divider />
+              <Divider />
+              {toggle === 'react' ?
+                <ToggleButton active value="react" onClick={() => handleToggle('react')}><FaReact/></ToggleButton>
+                :
+                <ToggleButton value="react" onClick={() => handleToggle('react')}><FaReact/></ToggleButton>
               }
               <Divider />
               <ToggleButton onClick={() => handleToggle('github')}>
@@ -76,7 +84,7 @@ const Projects = ({openModal,setOpenModal}) => {
                 
               ))}
             {projects
-              .filter((item) => item.category == toggle)
+              .filter((item) => item.category === toggle)
               .map((project) => (
                 <motion.div
                   whileInView={{opacity:1, y:0}}

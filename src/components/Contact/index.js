@@ -119,6 +119,9 @@ const Wrapper = styled.div`
   justify-content: center;
   width: 100%;
   max-width: 800px;
+  @media (max-width: 960px) {
+      flex-direction: column;
+  }
 `
 const Box = styled.div`
   display: flex;
@@ -197,7 +200,7 @@ const Contact = () => {
           >
             <Box>
               <Icon><MdPhone/></Icon>
-              <Text>+34 662501544 <br/> +44 7425594832</Text>
+              <Text>+34 662 501 544 (Spain)<br/> +44 7425 594832 (UK)</Text>
             </Box>
         </motion.div>
           

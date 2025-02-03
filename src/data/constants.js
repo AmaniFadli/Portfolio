@@ -5,6 +5,7 @@ import project4 from "../utils/projects/p4.png";
 import project5 from "../utils/projects/p5.png";
 import project6 from "../utils/projects/p6.jpg";
 import project7 from "../utils/projects/p7.png";
+import project8 from "../utils/projects/p8.png";
 
 import { FaGamepad } from "react-icons/fa";
 import { FiMonitor } from "react-icons/fi";
@@ -219,6 +220,12 @@ export const projects = [
         img: "https://img.freepik.com/vector-premium/icono-perfil-usuario-estilo-plano-ilustracion-vector-avatar-miembro-sobre-fondo-aislado-concepto-negocio-signo-permiso-humano_157943-15752.jpg",
         linkedin: "https://www.linkedin.com/in/cl%C3%A0udia-mart%C3%ADn-993933226/",
       },
+      {
+        name: "Amani Fadli Dokkali",
+        img: "",
+        linkedin: "https://www.linkedin.com/in/amani-fadli-dokkali-81b8172a0/",
+        github: "",
+      },
 
     ],
   },
@@ -232,20 +239,6 @@ export const projects = [
     tags: ["Unity", "C#", "Blender", "FMod"],
     category: "games",
     webapp: "https://amanifd.itch.io/hollywood-nightmare",
-    /*member: [
-      {
-        name: "Rishav Chanda",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
-      },
-      {
-        name: "Upasana Chaudhuri",
-        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-        github: "https://github.com/upasana0710",
-      },
-    ],*/
   },
   {
     id: 1,
@@ -268,20 +261,32 @@ export const projects = [
     tags: ["Unity", "C#", "Blender", "Photoshop"],
     category: "games",
     webapp: "https://amanifd.itch.io/unforeseen",
-    /*member: [
+    member: [
       {
-        name: "Rishav Chanda",
-        img: "https://avatars.githubusercontent.com/u/64485885?v=4",
-        linkedin: "https://www.linkedin.com/in/rishav-chanda-b89a791b3/",
-        github: "https://github.com/rishavchanda/",
+        name: "Guillem Sanchez Parra (Programmer)",
+        img: "",
+        linkedin: "https://www.linkedin.com/in/guillem-sanchez-parra-820551294/",
+        github: "",
       },
       {
-        name: "Upasana Chaudhuri",
-        img: "https://avatars.githubusercontent.com/u/100614635?v=4",
-        linkedin: "https://www.linkedin.com/in/upasana-chaudhuri-2a2bb5231/",
-        github: "https://github.com/upasana0710",
+        name: "Pol Rodríguez Melero (Programmer)",
+        img: "",
+        linkedin: "https://www.linkedin.com/in/pol-rodr%C3%ADguez-melero-633b38294/",
+        github: "https://github.com/Tihersarc",
       },
-    ],*/
+      {
+        name: "Joel Prados Zurita (3D Art)",
+        img: "",
+        linkedin: "https://www.linkedin.com/in/joel-prados-zurita-620aa9282/",
+        github: "https://github.com/Tihersarc",
+      },
+      {
+        name: "Amani Fadli Dokkali (Programmer & PixelArt)",
+        img: "",
+        linkedin: "https://www.linkedin.com/in/amani-fadli-dokkali-81b8172a0/",
+        github: "",
+      },
+    ],
   },
   {
     id: 3,
@@ -302,6 +307,38 @@ export const projects = [
     tags: ["Unity", "C#", "Blender", "Photoshop"],
     category: "games",
     webapp: "https://sttrangge.itch.io/escape-the-depth",
+    member: [
+      {
+        name: "Guillem Sanchez Parra (Programmer)",
+        img: "",
+        linkedin: "https://www.linkedin.com/in/guillem-sanchez-parra-820551294/",
+        github: "",
+      },
+      {
+        name: "Asmae Charroud Benaisni (UI)",
+        img: "",
+        linkedin: "https://www.linkedin.com/in/asmae-c-3a10b2255/",
+        github: "",
+      },
+      {
+        name: "Joel Prados Zurita (3D Art)",
+        img: "",
+        linkedin: "https://www.linkedin.com/in/joel-prados-zurita-620aa9282/",
+        github: "",
+      },
+      {
+        name: "Carlos Abril Salguero (3D Art)",
+        img: "",
+        linkedin: "https://www.linkedin.com/in/carlos-abril-salguero-2074b0254/",
+        github: "",
+      },
+      {
+        name: "Amani Fadli Dokkali (Programmer)",
+        img: "",
+        linkedin: "https://www.linkedin.com/in/amani-fadli-dokkali-81b8172a0/",
+        github: "",
+      },
+    ],
   },
   {
     id: 4,
@@ -312,6 +349,42 @@ export const projects = [
     tags: ["Unity", "C#", "Blender", "Photoshop"],
     category: "games",
     webapp: "https://sttrangge.itch.io/cozy-cup",
+    member: [
+      {
+        name: "Asmae Charroud Benaisni (UI & Programmer)",
+        img: "",
+        linkedin: "https://www.linkedin.com/in/asmae-c-3a10b2255/",
+        github: "",
+      },
+      {
+        name: "Eric Alvarez Fernandez (3D Art)",
+        img: "",
+        linkedin: "https://www.linkedin.com/in/eric-alvarez-fernandez-39bb52178/",
+        github: "",
+      },
+      {
+        name: "Naim Ladid (3D Art)",
+        img: "",
+        linkedin: "https://www.linkedin.com/in/naim-ladid-6a600b245/",
+        github: "",
+      },
+      {
+        name: "Amani Fadli Dokkali (Programmer)",
+        img: "",
+        linkedin: "https://www.linkedin.com/in/amani-fadli-dokkali-81b8172a0/",
+        github: "",
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "MY WEBSITE",
+    description:
+      "This website is made to show my work and my experience in the different areas of programming.",
+    image:project8,
+    tags: ["ReactJs", "CSS", "HTML"],
+    category: "react",
+    webapp: "https://amani-fadli.vercel.app/",
   },
 ];
 
