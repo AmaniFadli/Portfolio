@@ -18,12 +18,13 @@ export const Bio = {
     "Game Developer",
     "Web Programmer",
     "Java Programmer", 
+    "Data Base Programmer", 
     "Programmer"
   ],
   description:
     "I am a graduate in Multimedia Applications and Video Game Development, with experience in Web Programming, Databases, Mobile Apps, and Game Development. I am seeking a junior programmer position to apply my skills and enhance the digital experience. I am committed to learning and adapting to the work environment.",
   github: "https://github.com/AmaniFadli",
-  resume: require("../utils/projects/AF-CV.pdf"),
+  resume: require("../utils/projects/CV.pdf"),
   linkedin: "https://www.linkedin.com/in/amani-fadli-dokkali-81b8172a0/",
   itchio: "https://amanifd.itch.io/",
 };
@@ -35,7 +36,7 @@ export const skills = [
     skills: [
       {
         name: "Unity",
-        image: "https://yt3.googleusercontent.com/4YAaX7CsQ-paadHsNvC6wdv2nE_7VTKpoNJOTwFhHL4rQqLC8WFe6mNxL-z-e6sfHZbHG-ucPA=s900-c-k-c0x00ffffff-no-rj",
+        image: "https://cdn.sanity.io/images/fuvbjjlp/production/6d1df49565a2ad20ffa8386f1465ba52039133e3-1920x1080.png",
         text :"Games in Projects",
       },
       {
@@ -131,6 +132,12 @@ export const skills = [
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
         text :"Example Proyects in my GitHub",
       },
+      { 
+        name: "Oracle",
+        image:
+          "https://banner2.cleanpng.com/20180710/vze/aawpmgz55.webp",
+        text :"Small unfinished projects completed during my academic studies",
+      },
       {
         name: "3D Max",
         image:
@@ -142,6 +149,12 @@ export const skills = [
         image:
           "https://i.pcmag.com/imagery/reviews/00CHLsbAPPKloTAg2PZlVBC-1..v1662670755.jpg",
         text :"Small unfinished projects completed during my academic studies and my free time ",
+      },
+      { 
+        name: "Photoshop",
+        image:
+          "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/800px-Adobe_Photoshop_CC_icon.svg.png",
+        text :"Example Pixel Art Proyects in my GitHub",
       },
     ],
   },
