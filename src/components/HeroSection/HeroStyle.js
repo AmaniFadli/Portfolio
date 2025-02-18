@@ -74,12 +74,12 @@ export const HeroRightContainer = styled.div`
     width: 100%;
     order: 2;
     @media (max-width: 960px) {
-    order: 2;
-    margin-bottom: 30px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+      order: 2;
+      margin-bottom: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
 
   @media (max-width: 640px) {
     order: 2;
@@ -183,6 +183,8 @@ export const ResumeButton = styled.a`
       padding: 12px 0;
       font-size: 15px;
       align-items: center;
+      justify-content: center;
+      margin-left:90px;
     } 
 
 `;
@@ -206,9 +208,20 @@ export const Title = styled.div`
   text-align: center;
   font-weight: 600;
   margin-top: 20px;
-    color: ${({ theme }) => theme.text_primary};
-    @media (max-width: 768px) {
-  margin-top: 12px;
-        font-size: 37px;
-    }
+  color: ${({ theme }) => theme.text_primary};
+
+  // Key changes for responsiveness:
+  @media (max-width: 768px) {  // Adjust breakpoint as needed
+    margin-top: 12px;
+    font-size: 37px;
+    text-align: center;
+  }
+  @media (max-width: 640px) {  // Further adjustments for smaller screens
+    font-size: 28px; // Or even smaller
+    margin-top: 10px; // Adjust margin as needed
+  }
+  @media (max-width: 480px) { // for extra small screens
+    font-size: 24px;
+    margin-top: 8px;
+  }
 `;

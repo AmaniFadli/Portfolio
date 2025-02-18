@@ -7,10 +7,8 @@ import project6 from "../utils/projects/p6.jpg";
 import project7 from "../utils/projects/p7.png";
 import project8 from "../utils/projects/p8.png";
 
-import { FaGamepad } from "react-icons/fa";
 import { FiMonitor } from "react-icons/fi";
-import { FaMobileAlt } from "react-icons/fa";
-import { FaPlus } from "react-icons/fa";
+import { FaPlus, FaDatabase, FaGamepad, FaMobileAlt } from "react-icons/fa";
 
 export const Bio = {
   name: "Amani Fadli Dokkali",
@@ -33,128 +31,164 @@ export const skills = [
   {
     title: "GAME DEVELOPMENT",
     icon: <FaGamepad/>,
+    subtitle: "Creating immersive gaming experiences.",
     skills: [
       {
-        name: "Unity",
-        image: "https://cdn.sanity.io/images/fuvbjjlp/production/6d1df49565a2ad20ffa8386f1465ba52039133e3-1920x1080.png",
+        name: "  Unity  ",
+        image: "https://w7.pngwing.com/pngs/426/535/png-transparent-unity-new-logo-tech-companies.png",
         text :"Games in Projects",
+        progress : 90,
       },
       {
         name: "C#",
         image: "https://www.jetbrains.com/guide/assets/csharp-logo-265a149e.svg",
         text :"Using in Unity ",
+        progress : 95,
       },
       {
         name: "Unreal",
         image:
           "https://seeklogo.com/images/U/unreal-engine-logo-12B9A1D996-seeklogo.com.png",
         text :"Small unfinished projects completed during my academic studies",
+        progress : 40,
       },
       
       {
         name: "C++",
         image: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/ISO_C%2B%2B_Logo.svg/1200px-ISO_C%2B%2B_Logo.svg.png",
         text :"Using in Unreal ",
+        progress : 30,
       },
     ],
   },
   {
     title: "WEB DEVELOPMENT",
     icon: <FiMonitor/> ,
+    subtitle: "Building dynamic websites with modern tools.",
     skills: [
       {
         name: "React Js",
         image:"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9Ii0xMS41IC0xMC4yMzE3NCAyMyAyMC40NjM0OCI+CiAgPHRpdGxlPlJlYWN0IExvZ288L3RpdGxlPgogIDxjaXJjbGUgY3g9IjAiIGN5PSIwIiByPSIyLjA1IiBmaWxsPSIjNjFkYWZiIi8+CiAgPGcgc3Ryb2tlPSIjNjFkYWZiIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIi8+CiAgICA8ZWxsaXBzZSByeD0iMTEiIHJ5PSI0LjIiIHRyYW5zZm9ybT0icm90YXRlKDYwKSIvPgogICAgPGVsbGlwc2Ugcng9IjExIiByeT0iNC4yIiB0cmFuc2Zvcm09InJvdGF0ZSgxMjApIi8+CiAgPC9nPgo8L3N2Zz4K",
         text :"I built this website using ReactJS",
+        progress : 80,
       },
       {
         name: "Node Js",
         image:
           "https://nodejs.org/static/images/logo.svg",
         text :"Example Proyects in my GitHub",
+        progress : 65,
       },
       {
         name: "HTML",
         image: "https://www.w3.org/html/logo/badge/html5-badge-h-solo.png",
         text :"Example Proyects in my GitHub",
+        progress : 80,
       },
       {
         name: "CSS",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d5/CSS3_logo_and_wordmark.svg/1452px-CSS3_logo_and_wordmark.svg.png",
         text :"Example Proyects in my GitHub",
+        progress : 65,
       },
       {
         name: "JavaScript",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6a/JavaScript-logo.png/800px-JavaScript-logo.png",
         text :"Example Proyects in my GitHub",
+        progress : 90,
       },
     ],
   },
   {
     title: "MOBILE DEVELOPMENT",
     icon: <FaMobileAlt/>,
+    subtitle: "Developing intuitive mobile apps.",
     skills: [
       {
         name: "AndroidStudio",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Android_Studio_Logo_2024.svg/800px-Android_Studio_Logo_2024.svg.png",
         text :"Example Proyects in my GitHub",
+        progress : 55,
       },
       {
         name: "Kotlin",
         image:
           "https://cms-assets.tutsplus.com/cdn-cgi/image/width=360/uploads/users/362/posts/29304/preview_image/picKotlin.jpg",
         text :"Example Proyects in my GitHub",
+        progress : 50,
       },
     ],
   },
   {
-    title: "OTHERS",
-    icon: <FaPlus/>,
+    title: "DATABASE",
+    icon: <FaDatabase />,
+    subtitle: "Managing data with efficient databases.",
     skills: [
       {
-        name: "Java",
+        name: "SQL",
         image:
-          "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
-        text :"Prototype in Projects and in my GitHub",
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
+        text :"Example Proyects in my GitHub",
+        progress : 85,
       },
       {
         name: "MongoDB",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg",
         text :"Example Proyects in my GitHub",
+        progress : 80,
       },
       {
         name: "MySQL",
         image:
           "https://raw.githubusercontent.com/devicons/devicon/master/icons/mysql/mysql-original-wordmark.svg",
         text :"Example Proyects in my GitHub",
+        progress : 85,
       },
       { 
         name: "Oracle",
         image:
           "https://banner2.cleanpng.com/20180710/vze/aawpmgz55.webp",
         text :"Small unfinished projects completed during my academic studies",
+        progress : 60,
+      },
+    ],
+  },
+  {
+    title: "OTHERS",
+    icon: <FaPlus/>,
+    subtitle: "Exploring diverse development tools.",
+    skills: [
+      {
+        name: "Java",
+        image:
+          "https://raw.githubusercontent.com/devicons/devicon/master/icons/java/java-original.svg",
+        text :"Prototype in Projects and in my GitHub",
+        progress : 95,
       },
       {
         name: "3D Max",
         image:
           "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi_D8rh1f1pabHyt_OEo-mXInBIicX5EKwuw&s",
         text :"Example Proyects in my GitHub",
+        progress : 40,
       },
       {
         name: "Blender",
         image:
           "https://i.pcmag.com/imagery/reviews/00CHLsbAPPKloTAg2PZlVBC-1..v1662670755.jpg",
         text :"Small unfinished projects completed during my academic studies and my free time ",
+        progress : 40,
       },
       { 
         name: "Photoshop",
         image:
           "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Adobe_Photoshop_CC_icon.svg/800px-Adobe_Photoshop_CC_icon.svg.png",
         text :"Example Pixel Art Proyects in my GitHub",
+        progress : 50,
       },
     ],
   },
@@ -164,7 +198,7 @@ export const experiences = [
   {
     id: 0,
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTV8_ibp-PDE6CuOoRKWsbUfVo5-ZfmU6ipXg&s",
-    role: "Simulation Programmer Intern, Drone Simulator",
+    role: "Junior Unity Programmer - Drone Simulator",
     company: "AEROFOR",
     date: "Feb 2024 - Present",
     desc: "Interactive Simulator Development: Created an immersive simulator with realistic physics and detailed environments, offering intuitive controls, training modules, and real-time feedback. Level Design: Designed varied and progressively challenging levels with interactive elements, optimized for efficient performance and an engaging experience. User Management Development: Implemented personalised and secure profiles, with performance analysis tools, customization options, and social features for an enhanced experience.",
@@ -180,8 +214,8 @@ export const education = [
   {
     id: 0,
     img: "https://media.licdn.com/dms/image/v2/C4D0BAQGkZ66n1TziFw/company-logo_200_200/company-logo_200_200/0/1630559246814/institut_ausis_march_logo?e=2147483647&v=beta&t=ZmocxYNTLmdW5JOFY8aRYIjcQmTR3sejRkYJxAaVL7o",
-    school: "Institut Pedralbes,Barcelona, Spain",
-    date: "Sept 2022- Jun 2024 ",
+    school: "Institut Pedralbes,Barcelona Spain",
+    date: "Sept 2022 – Jun 2024 ",
     grade: "8,02",
     desc: "In this course prepares you to design and develop multiplatform video games, as well as web and mobile applications. You’ll learn programming, databases, and how to use game engines like Unity or Unreal Engine to create 2D/3D environments, gameplay mechanics, and artificial intelligence. Additionally, you’ll work on web and mobile app development, gaining versatile skills. The course includes a final project (a fully developed video game or application) and internships in the tech industry, making it the perfect mix of creativity and programming to thrive in gaming, web, and mobile development.",
     degree: "HNC in Development of Muliplatform Apps & Videogame (DAM-VI)",
@@ -193,7 +227,7 @@ export const education = [
     date: "Sept 2020 – May 2022 ",
     grade: "5,69",
     desc: "Research Project: “ Jupiter: An Impossible Star “, based on the study of the formation, composition and impact of Jupiter on the Solar System and the potential of a binary system by programming a simulation. ",
-    degree: "Spanish Baccalaureate in Technology,",
+    degree: "Spanish Baccalaureate in Technology",
   },
   
 ];
