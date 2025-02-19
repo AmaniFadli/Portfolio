@@ -300,20 +300,14 @@ const Skills = () => {
             <Skill 
               key={skill.title} 
               onClick={() => handleToggle(skill.title)} 
-            >
-              <motion.div
-                whileInView={{ opacity: 1, x: 0 }}
-                initial={{ opacity: 0, x: 100 }}
-                transition={{ duration: 0.5 }}
-              >
-                <SkillTitleContainer>
-                  <SkillIcon>{skill.icon}</SkillIcon>
-                  <SkillTitleWrapper>
-                    <SkillTitle>{skill.title}</SkillTitle>
-                    <SkillSubtitle>{skill.subtitle}</SkillSubtitle>
-                  </SkillTitleWrapper>
-                </SkillTitleContainer>
-              </motion.div>
+            > 
+              <SkillTitleContainer>
+                <SkillIcon>{skill.icon}</SkillIcon>
+                <SkillTitleWrapper>
+                  <SkillTitle>{skill.title}</SkillTitle>
+                  <SkillSubtitle>{skill.subtitle}</SkillSubtitle>
+                </SkillTitleWrapper>
+              </SkillTitleContainer>
             </Skill>
           ))}
         </SkillsContainerLeft>

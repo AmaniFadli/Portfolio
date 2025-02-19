@@ -39,3 +39,8 @@ body{
   ::-webkit-scrollbar-thumb:hover {
     background: #626970;
   }
+
+  ::selection {
+    background-color:  #49e7e7; /* Color lila */
+    color: black; /* Color del texto */
+  }
