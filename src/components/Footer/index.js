@@ -94,7 +94,7 @@ function Footer() {
           <SocialMediaIcon href={Bio.github} target="display"><FaGithub /></SocialMediaIcon>
         </SocialMediaIcons>
         <Copyright>
-          &copy; 2024 Amani Fdli Dokkali. All rights reserved.
+          &copy; 2025 Amani Fdli Dokkali. All rights reserved.
         </Copyright>
 
       </FooterWrapper>

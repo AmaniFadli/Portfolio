@@ -192,17 +192,6 @@ const Contact = () => {
             </Box>
           </motion.div>
           
-
-          <motion.div 
-            whileInView={{opacity:1, x:0}}
-            initial={{opacity:0, x: -100}}
-            transition={{duration: 0.5}}
-          >
-            <Box>
-              <Icon><MdPhone/></Icon>
-              <Text>+34 662 501 544 (Spain)<br/> +44 7425 594832 (UK)</Text>
-            </Box>
-        </motion.div>
           
         </Wrapper>
       </Container>
