@@ -20,7 +20,7 @@ export const Bio = {
     "Programmer"
   ],
   description:
-    "I am a graduate in Multimedia Applications and Video Game Development, with experience in Web Programming, Databases, Mobile Apps, and Game Development. I am seeking a junior programmer position to apply my skills and enhance the digital experience. I am committed to learning and adapting to the work environment.",
+    "I am a student at the University of Bedfordshir, studying Computer Games Development. I graduated in Multimedia Applications and Video Game Development, with experience in Web Programming, Databases, Mobile Apps, and Game Development. I am seeking a junior programmer position to apply my skills and enhance the digital experience. I am committed to learning and adapting to the work environment.",
   github: "https://github.com/AmaniFadli",
   resume: require("../utils/projects/Amani-CV.pdf"),
   linkedin: "https://www.linkedin.com/in/amani-fadli-dokkali-81b8172a0/",
