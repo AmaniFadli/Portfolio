@@ -211,8 +211,17 @@ export const experiences = [
 ];
 
 export const education = [
-  {
+   {
     id: 0,
+    img: "https://aplicar-prod-public.s3.amazonaws.com/uploads/school/logos/cb4a270e-9842-4300-a8fe-33b250375a1c/20231215T110722.263395Z_School_Logo.png",
+    school: "University of Bedfordshir, UK",
+    date: "Sept 2026 – Present ",
+    grade: "8,02",
+    desc: "FY, Basics on Programmation and Academic Skills",
+    degree: "Bachelor of Sciences with Honours - Computer Games Development (with Foundation Year)",
+  },
+  {
+    id: 1,
     img: "https://media.licdn.com/dms/image/v2/C4D0BAQGkZ66n1TziFw/company-logo_200_200/company-logo_200_200/0/1630559246814/institut_ausis_march_logo?e=2147483647&v=beta&t=ZmocxYNTLmdW5JOFY8aRYIjcQmTR3sejRkYJxAaVL7o",
     school: "Institut Pedralbes,Barcelona Spain",
     date: "Sept 2022 – Jun 2024 ",
@@ -221,7 +230,7 @@ export const education = [
     degree: "HNC in Development of Muliplatform Apps & Videogame (DAM-VI)",
   },
   {
-    id: 1,
+    id: 2,
     img: "https://pbs.twimg.com/media/GXDQfkgX0AEmCTM.jpg",
     school:"Institut Isaac Albeniz, Badalona, Spain ",
     date: "Sept 2020 – May 2022 ",
