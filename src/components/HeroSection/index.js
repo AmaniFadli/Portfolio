@@ -1,12 +1,7 @@
 import React from 'react'
-import HeroBgAnimation from '../HeroBgAnimation'
-import { HeroContainer, HeroBg, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, TextLoop, Title, Span, SubTitle,SocialMediaIcons,SocialMediaIcon, ResumeButton } from './HeroStyle'
+import { HeroContainer, HeroLeftContainer, Img, HeroRightContainer, HeroInnerContainer, Title, SubTitle, ResumeButton } from './HeroStyle'
 import HeroImg from '../../images/HeroImage.jpeg'
-import Typewriter from 'typewriter-effect';
 import { Bio } from '../../data/constants';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import { FaItchIo } from 'react-icons/fa';
-import { FaGithub } from 'react-icons/fa';
 import { FiDownload } from 'react-icons/fi';
 
 import { motion } from "framer-motion";

@@ -2,10 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { Snackbar } from '@mui/material';
 
 import { MdOutlineMail } from 'react-icons/md';
-import { MdPhone } from 'react-icons/md';
 
 import { motion } from "framer-motion";
 

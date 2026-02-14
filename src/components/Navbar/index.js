@@ -1,18 +1,14 @@
 import React from 'react'
-import { Nav, NavLink, NavbarContainer,NavLinkIcons, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink } from './NavbarStyledComponent'
-import { DiCssdeck } from 'react-icons/di';
+import { Nav, NavLink, NavbarContainer,NavLinkIcons, NavItems, GitHubButton, MobileIcon, MobileMenu,MobileLink } from './NavbarStyledComponent'
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
-import { Close, CloseRounded } from '@mui/icons-material';
 import { useTheme } from 'styled-components';
 import {
   FaCode,
   FaHome,
   FaGraduationCap,
   FaBriefcase,
-  FaFolderOpen,
-  FaEnvelopeOpen,
-  FaUserCircle
+  FaFolderOpen
 } from 'react-icons/fa';
 import { MdContactMail } from 'react-icons/md';
 const Navbar = () => {

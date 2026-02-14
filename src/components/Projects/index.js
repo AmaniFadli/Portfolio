@@ -4,7 +4,7 @@ import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, Togg
 import ProjectCard from '../Cards/ProjectCards'
 import { projects } from '../../data/constants'
 import { Bio } from '../../data/constants';
-import { FaGithub, FaGamepad,FaReact,FaPen,FaList,FaCoffee} from 'react-icons/fa';
+import { FaGithub, FaGamepad,FaReact,FaList,FaCoffee} from 'react-icons/fa';
 
 
 import { motion } from "framer-motion";
