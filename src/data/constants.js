@@ -216,7 +216,7 @@ export const education = [
     img: "https://aplicar-prod-public.s3.amazonaws.com/uploads/school/logos/cb4a270e-9842-4300-a8fe-33b250375a1c/20231215T110722.263395Z_School_Logo.png",
     school: "University of Bedfordshir, UK",
     date: "Sept 2026 – Present ",
-    grade: "8,02",
+    grade: "Not Yet",
     desc: "FY, Basics on Programmation and Academic Skills",
     degree: "Bachelor of Sciences with Honours - Computer Games Development (with Foundation Year)",
   },
