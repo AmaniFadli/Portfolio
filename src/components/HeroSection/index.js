@@ -39,7 +39,7 @@ const HeroSection = () => {
                             transition={{duration: 0.5}}
                         >
                             <SubTitle>
-                            <p>I am a graduate in <b>Multimedia Applications and Video Game Development</b> (DAM-VI), with experience in <u>Web Programming</u>, <u>Databases</u>, <u>Mobile Apps</u>, and <u>Game Development</u>. I am seeking a Junior Programmer position to apply my skills and contribute to enhancing the digital experience. I am committed to continuous learning and adapting to the work environment.</p>
+                            <p>I am a student at the <b>University of Bedfordshir</b> studying Computer Games Development.I graduated in <b>Multimedia Applications and Video Game Development</b>(DAM-VI), with experience in Web Programming, Databases, Mobile Apps, and Game Development. I am seeking a junior programmer position to apply my skills and enhance the digital experience. I am committed to learning and adapting to the work environment.</p>
                             <br/>
                             <p>During my years of study, I developed a new artificial intelligence that earned me the <b>DonaTIC 2024</b> award, and I showcased my video game at the <i>Saga-Salón Gaming 2023</i> event in Barcelona, where I was also interviewed.</p>
 
